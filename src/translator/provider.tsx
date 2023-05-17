@@ -17,13 +17,11 @@ export const LanguageProvider = ({ children }: {
         userLanguage,
         dictionary: dictionaryList[userLanguage],
         userLanguageChange: (selected?: LanguageEnum) => {
-            console.log(selected);
             if (selected) {
                 setUserLanguage(() => selected);
                 window.localStorage.setItem(localLangKey, selected);
                 return;
             }
-            console.log('def');
             const defaultLanguage = window.localStorage.getItem(localLangKey);
             if (defaultLanguage !== null) {
                 const lang = defaultLanguage as LanguageEnum;
