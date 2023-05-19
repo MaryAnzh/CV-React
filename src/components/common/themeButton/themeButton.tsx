@@ -1,10 +1,7 @@
 import React from 'react';
 import { ThemeEnum } from '../../../themes/theme.interface';
-import { useTheme } from 'styled-components';
 
 import { ThemeButtonStyle } from "./themeButton.styled";
-// import { ReactComponent as Sun } from './icon/sun.svg';
-// import { ReactComponent as Moon } from './icon/moon.svg';
 import { ReactSVG } from "react-svg";
 
 type ThemeButtonType = {
@@ -13,7 +10,6 @@ type ThemeButtonType = {
 }
 
 export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
-    const theme = useTheme();
 
     return (
         <ThemeButtonStyle
