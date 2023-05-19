@@ -9,7 +9,8 @@ import { Text } from "../../smart/text/text";
 import { ThemeButton } from "../themeButton/themeButton";
 import {
     HeaderStyle,
-    HeaderWrap
+    HeaderWrap,
+    ThemeWrap
 } from "./header.styled";
 
 type HeaderProps = {
@@ -36,14 +37,14 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 <h2>
                     <Text tid='AUTHOR' />
                 </h2>
-                <div>
+                <ThemeWrap>
                     <ThemeButton
                         name={ThemeEnum.light}
                         changeTheme={changeTheme} />
                     <ThemeButton
                         name={ThemeEnum.black}
                         changeTheme={changeTheme} />
-                </div>
+                </ThemeWrap>
                 <LanguageSelector />
             </HeaderWrap>
         </HeaderStyle>

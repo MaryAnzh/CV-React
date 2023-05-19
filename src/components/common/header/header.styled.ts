@@ -13,3 +13,11 @@ export const HeaderWrap = styled.div`
     display: flex;
     justify-content: space-between;
 `;
+
+export const ThemeWrap = styled.div`
+  position: relative;
+  width: calc(${({ theme }) => theme.constants.iconSize} * 2.5);
+  height: ${({ theme }) => theme.constants.iconSize};
+  border-radius: 50%;
+  background: red;
+`;
