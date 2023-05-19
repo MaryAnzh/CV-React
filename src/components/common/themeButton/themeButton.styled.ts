@@ -10,9 +10,8 @@ export const ThemeButtonStyle = styled.button<ThemeButtonType>`
   width: ${({ theme }) => theme.constants.iconSize};
   height: ${({ theme }) => theme.constants.iconSize};
   border-radius: 50%;
-  border: 1px solid ${({ theme }) => theme.colors.contrast};
-  background: ${({ background }) => background};
-  opacity: ${(({ name, theme }) => name === theme.name ? '1' : '0.6')};
+  background: none;
+  opacity: ${(({ name, theme }) => name === theme.name ? '1' : '0.4')};
   transition: .3s;
   cursor: pointer;
 
