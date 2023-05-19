@@ -1,12 +1,17 @@
 export interface IThemeConst {
     maxAppSize: number,
+    black: string,
+    white: string,
+    iconSize: string,
 }
 
 export interface IThemeColors {
-    background: string
+    main: string,
+    contrast: string,
 }
 
 export interface ITheme {
+    name: ThemeEnum,
     constants: IThemeConst,
     colors: IThemeColors,
 }

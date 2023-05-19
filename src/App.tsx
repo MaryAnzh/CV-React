@@ -1,22 +1,26 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ThemeContext } from "styled-components";
-
-import { theme } from './themes/themes';
-import {
-  AppStyle,
-  PageStyle
-} from './AppStyle';
-import { Header } from './components/common/header/header';
 import { LanguageProvider } from './translator/provider';
-import { LanguageContext } from './translator/context';
+import { IThemes, theme } from './themes/themes';
+
+import { Header } from './components/common/header/header';
+import {
+  AppStyle
+} from './AppStyle';
 
 function App() {
+  const [selectedTheme, setSelectedTheme] = useState(theme.light);
+
+  const changeTheme = (name: keyof IThemes) => {
+    const newTheme = theme[name];
+    setSelectedTheme(() => newTheme);
+  }
 
   return (
     <LanguageProvider>
-      <ThemeContext.Provider value={theme.light}>
+      <ThemeContext.Provider value={selectedTheme}>
         <AppStyle>
-          <Header />
+          <Header changeTheme={changeTheme} />
         </AppStyle>
       </ThemeContext.Provider>
     </LanguageProvider>

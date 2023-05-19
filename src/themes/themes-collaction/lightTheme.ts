@@ -1,11 +1,13 @@
-import { ITheme, IThemeColors } from "../theme.interface";
+import { ITheme, IThemeColors, ThemeEnum } from "../theme.interface";
 import { themeConst } from "../themeConstants";
 
 const colors: IThemeColors = {
-    background: '#ffffff',
+    main: '#ffffff',
+    contrast: '#333',
 }
 
 export const lightTheme: ITheme = {
+    name: ThemeEnum.light,
     constants: themeConst,
     colors: colors,
 }
