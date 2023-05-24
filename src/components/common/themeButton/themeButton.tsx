@@ -19,12 +19,20 @@ enum RotateEnum {
     active = 'rotate(-180deg)',
     desActive = 'rotate(0deg)',
 }
+enum IconRotateEnum {
+    active = 'rotate(0deg)',
+    desActive = 'rotate(1800deg)',
+}
 
 export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
     const currentTheme = useTheme();
 
     const currentRotate: RotateEnum = currentTheme && props.name === currentTheme.name ? RotateEnum.active : RotateEnum.desActive;
     const [rotate, useRotate] = useState<RotateEnum>(currentRotate);
+
+    const currentIconRotate: IconRotateEnum = currentTheme && props.name === currentTheme.name ? IconRotateEnum.active : IconRotateEnum.desActive;
+    const [iconRotate, useIconRotate] = useState<IconRotateEnum>(currentIconRotate);
+
 
     const animationStyle = {
         animation: currentTheme && props.isAnimationStart ?
@@ -34,6 +42,16 @@ export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
             : AnimationEnum.none
         ,
         transform: rotate,
+    }
+
+    const iconStyle = {
+        animation: currentTheme && props.isAnimationStart ?
+            currentTheme.name === props.name ?
+                AnimationEnum.active
+                : AnimationEnum.desActive
+            : AnimationEnum.none
+        ,
+        transform: iconRotate,
     }
 
     const changeTheme = () => {
@@ -48,8 +66,10 @@ export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
         if (currentTheme) {
             if (currentTheme.name === props.name) {
                 useRotate(() => RotateEnum.active);
+                useIconRotate(() => IconRotateEnum.active);
             } else {
                 useRotate(() => RotateEnum.desActive);
+                useIconRotate(() => IconRotateEnum.desActive);
             }
         }
     }
@@ -62,8 +82,8 @@ export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
             name={props.name}
         >
             {props.name === ThemeEnum.black ?
-                <ReactSVG src='./icon/moon.svg' /> :
-                <ReactSVG src='./icon/sun.svg' />
+                <ReactSVG style={iconStyle} src='./icon/moon.svg' /> :
+                <ReactSVG style={iconStyle} src='./icon/sun.svg' />
             }
         </ThemeButtonStyle>
     );
