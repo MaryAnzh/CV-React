@@ -3,6 +3,7 @@ export interface IThemeConst {
     black: string,
     white: string,
     iconSize: string,
+    mediaPhonePoint: string,
 }
 
 export interface IThemeColors {

@@ -10,6 +10,9 @@ import { ThemeButton } from "../themeButton/themeButton";
 import {
     HeaderStyle,
     HeaderWrap,
+    LogoName,
+    AuthorName,
+    SettingsSection,
     ThemeWrap
 } from "./header.styled";
 
@@ -36,20 +39,24 @@ export const Header: React.FC<HeaderProps> = (props) => {
     return (
         <HeaderStyle>
             <HeaderWrap>
-                <h2>
-                    <Text tid='AUTHOR' />
-                </h2>
-                <ThemeWrap>
-                    <ThemeButton
-                        name={ThemeEnum.light}
-                        changeTheme={changeTheme}
-                        isAnimationStart={animationStart} />
-                    <ThemeButton
-                        name={ThemeEnum.black}
-                        changeTheme={changeTheme}
-                        isAnimationStart={animationStart} />
-                </ThemeWrap>
-                <LanguageSelector />
+                <LogoName>
+                    <AuthorName>
+                        <Text tid='AUTHOR' />
+                    </AuthorName>
+                </LogoName>
+                <SettingsSection>
+                    <ThemeWrap>
+                        <ThemeButton
+                            name={ThemeEnum.light}
+                            changeTheme={changeTheme}
+                            isAnimationStart={animationStart} />
+                        <ThemeButton
+                            name={ThemeEnum.black}
+                            changeTheme={changeTheme}
+                            isAnimationStart={animationStart} />
+                    </ThemeWrap>
+                    <LanguageSelector />
+                </SettingsSection>
             </HeaderWrap>
         </HeaderStyle>
     );

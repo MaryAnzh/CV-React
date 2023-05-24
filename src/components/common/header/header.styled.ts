@@ -11,7 +11,33 @@ export const HeaderWrap = styled.div`
     max-width: ${({ theme }) => theme.constants.maxAppSize};
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: space-between;
+
+    @media (max-width: ${({theme}) => theme.constants.mediaPhonePoint}) {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+`;
+
+export const LogoName = styled.div`
+  display: flex;
+
+`;
+
+export const AuthorName = styled.h1`
+  font-size: 1.2rem;
+`;
+
+export const SettingsSection = styled.div`
+  display: flex;
+  gap: 4rem;
+
+  @media (max-width: ${({theme}) => theme.constants.mediaPhonePoint}) {
+    width: 100%;
+    justify-content: space-between;
+    }
 `;
 
 export const ThemeWrap = styled.div`
