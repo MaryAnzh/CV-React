@@ -7,12 +7,13 @@ import { useTheme } from 'styled-components';
 
 type ThemeButtonType = {
     name: ThemeEnum,
-    changeTheme: (theme: ThemeEnum) => void
+    changeTheme: (theme: ThemeEnum) => void,
+    isAnimationStart: boolean
 }
 enum AnimationEnum {
     none = 'none',
     active = 'fly-to-left 1s forwards',
-    desActive = 'fly-to-right 1s forwards',
+    desActive = 'fly-to-right 1s linear forwards',
 }
 enum RotateEnum {
     active = 'rotate(-180deg)',
@@ -22,26 +23,25 @@ enum RotateEnum {
 export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
     const currentTheme = useTheme();
 
-    const animation: AnimationEnum = AnimationEnum.none;
     const currentRotate: RotateEnum = currentTheme && props.name === currentTheme.name ? RotateEnum.active : RotateEnum.desActive;
-    const [animationAction, setAnimationAction] = useState<AnimationEnum>(animation);
     const [rotate, useRotate] = useState<RotateEnum>(currentRotate);
 
     const animationStyle = {
-        animation: animationAction,
+        animation: currentTheme && props.isAnimationStart ?
+            currentTheme.name === props.name ?
+                AnimationEnum.active
+                : AnimationEnum.desActive
+            : AnimationEnum.none
+        ,
         transform: rotate,
     }
 
     const changeTheme = () => {
         if (currentTheme) {
-            if (currentTheme.name === props.name) {
-                setAnimationAction(() => AnimationEnum.desActive);
-            } else {
-                setAnimationAction(() => AnimationEnum.active);
+            if (currentTheme.name !== props.name) {
                 props.changeTheme(props.name);
             }
         }
-
     }
 
     const animationEnd = () => {
@@ -52,7 +52,6 @@ export const ThemeButton: React.FC<ThemeButtonType> = (props) => {
                 useRotate(() => RotateEnum.desActive);
             }
         }
-        setAnimationAction(() => AnimationEnum.none);
     }
 
     return (

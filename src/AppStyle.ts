@@ -6,6 +6,7 @@ export const AppStyle = styled.div`
   padding: 1rem;
   background: ${({theme})=> theme.colors.main};
   color: ${({theme}) => theme.colors.contrast};
+  transition: background-color 0.5s ease;
 `;
 
 export const PageStyle = styled.div`

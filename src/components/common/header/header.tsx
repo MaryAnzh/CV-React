@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { LanguageContext } from "../../../translator/context";
 import { ThemeEnum } from "../../../themes/theme.interface";
@@ -18,9 +18,11 @@ type HeaderProps = {
 }
 
 export const Header: React.FC<HeaderProps> = (props) => {
+    const [animationStart, useAnimationStart] = useState<boolean>(false);
 
     const changeTheme = (name: ThemeEnum) => {
         props.changeTheme(name);
+        useAnimationStart(() => true);
     }
 
     const { userLanguageChange } = useContext(LanguageContext);
@@ -40,10 +42,12 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 <ThemeWrap>
                     <ThemeButton
                         name={ThemeEnum.light}
-                        changeTheme={changeTheme} />
+                        changeTheme={changeTheme}
+                        isAnimationStart={animationStart} />
                     <ThemeButton
                         name={ThemeEnum.black}
-                        changeTheme={changeTheme} />
+                        changeTheme={changeTheme}
+                        isAnimationStart={animationStart} />
                 </ThemeWrap>
                 <LanguageSelector />
             </HeaderWrap>
