@@ -1,9 +1,10 @@
 import React from 'react';
-import { AnimationStyle } from './animation';
+import { AnimationStyle } from './animation.styled';
 
-export const GamePage: React.FC = () => {
+export const Animation = () => {
     return (
         <AnimationStyle>
-        </AnimationStyle >
+            Animation
+        </AnimationStyle>
     );
 }

@@ -11,14 +11,22 @@ export const HeaderWrap = styled.div`
     max-width: ${({ theme }) => theme.constants.maxAppSize};
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+`;
 
-    @media (max-width: ${({theme}) => theme.constants.mediaPhonePoint}) {
+export const HeaderTop = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+    @media (max-width: ${({ theme }) => theme.constants.mediaPhonePoint}) {
       flex-direction: column-reverse;
       align-items: flex-start;
       gap: 0.8rem;
     }
+
 `;
 
 export const LogoName = styled.div`
@@ -34,7 +42,7 @@ export const SettingsSection = styled.div`
   display: flex;
   gap: 4rem;
 
-  @media (max-width: ${({theme}) => theme.constants.mediaPhonePoint}) {
+  @media (max-width: ${({ theme }) => theme.constants.mediaPhonePoint}) {
     width: 100%;
     justify-content: space-between;
     }

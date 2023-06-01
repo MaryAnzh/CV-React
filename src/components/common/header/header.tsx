@@ -13,8 +13,10 @@ import {
     LogoName,
     AuthorName,
     SettingsSection,
-    ThemeWrap
+    ThemeWrap,
+    HeaderTop
 } from "./header.styled";
+import { Nav } from "../nav/nav";
 
 type HeaderProps = {
     changeTheme: (name: keyof IThemes) => void
@@ -39,24 +41,27 @@ export const Header: React.FC<HeaderProps> = (props) => {
     return (
         <HeaderStyle>
             <HeaderWrap>
-                <LogoName>
-                    <AuthorName>
-                        <Text tid='AUTHOR' />
-                    </AuthorName>
-                </LogoName>
-                <SettingsSection>
-                    <ThemeWrap>
-                        <ThemeButton
-                            name={ThemeEnum.light}
-                            changeTheme={changeTheme}
-                            isAnimationStart={animationStart} />
-                        <ThemeButton
-                            name={ThemeEnum.black}
-                            changeTheme={changeTheme}
-                            isAnimationStart={animationStart} />
-                    </ThemeWrap>
-                    <LanguageSelector />
-                </SettingsSection>
+                <HeaderTop>
+                    <LogoName>
+                        <AuthorName>
+                            <Text tid='AUTHOR' />
+                        </AuthorName>
+                    </LogoName>
+                    <SettingsSection>
+                        <ThemeWrap>
+                            <ThemeButton
+                                name={ThemeEnum.light}
+                                changeTheme={changeTheme}
+                                isAnimationStart={animationStart} />
+                            <ThemeButton
+                                name={ThemeEnum.black}
+                                changeTheme={changeTheme}
+                                isAnimationStart={animationStart} />
+                        </ThemeWrap>
+                        <LanguageSelector />
+                    </SettingsSection>
+                </HeaderTop>
+                <Nav />
             </HeaderWrap>
         </HeaderStyle>
     );

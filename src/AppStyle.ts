@@ -9,6 +9,6 @@ export const AppStyle = styled.div`
   transition: background-color 0.5s ease;
 `;
 
-export const PageStyle = styled.div`
-  
+export const MainStyle = styled.main`
+  width: 100%;
 `;
