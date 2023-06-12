@@ -15,8 +15,7 @@ export const ThemeButtonStyle = styled.button<ThemeButtonType>`
   cursor: pointer;
   ${(({ name }) => name === ThemeEnum.black ? 'right: 0' : 'right: 0')};
   pointer-events: ${(({ name, theme }) => name === theme.name ? 'none' : 'all')};
-  transform-style: preserve-3d;
-  perspective: 500px;
+
   transform-origin: -25%;
   
   div {

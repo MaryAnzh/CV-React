@@ -55,6 +55,8 @@ export const ThemeWrap = styled.div`
   position: relative;
   width: calc(${({ theme }) => theme.constants.iconSize} * 2.5);
   height: ${({ theme }) => theme.constants.iconSize};
+  transform-style: preserve-3d;
+  perspective: calc(${({ theme }) => theme.constants.iconSize} * 2.5);
 `;
 
 export const NavWrap = styled.div`
