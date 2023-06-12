@@ -55,7 +55,6 @@ export const ThemeWrap = styled.div`
   position: relative;
   width: calc(${({ theme }) => theme.constants.iconSize} * 2.5);
   height: ${({ theme }) => theme.constants.iconSize};
-  border-radius: 50%;
 `;
 
 export const NavWrap = styled.div`
