@@ -1,10 +1,14 @@
 import React from 'react';
 import { InfoStyle } from './info.styled';
+import { PageTitle } from '../../AppStyle';
+import { Text } from '../../components/smart/text/text';
 
 export const Info = () => {
     return (
         <InfoStyle>
-            Info
+            <PageTitle>
+            <Text tid='NAV_INFO'/>
+            </PageTitle>
         </InfoStyle>
     );
 }

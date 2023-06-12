@@ -14,7 +14,8 @@ import {
     AuthorName,
     SettingsSection,
     ThemeWrap,
-    HeaderTop
+    HeaderTop,
+    NavWrap
 } from "./header.styled";
 import { Nav } from "../nav/nav";
 
@@ -44,6 +45,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 <HeaderTop>
                     <LogoName>
                         <AuthorName>
+                            <span>CV</span>
                             <Text tid='AUTHOR' />
                         </AuthorName>
                     </LogoName>
@@ -61,7 +63,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
                         <LanguageSelector />
                     </SettingsSection>
                 </HeaderTop>
-                <Nav />
+                <NavWrap>
+                    <Nav />
+                </NavWrap>
             </HeaderWrap>
         </HeaderStyle>
     );

@@ -4,6 +4,7 @@ import { Info } from "./info/info";
 import { Animation } from "./animation/animation";
 import { Games } from "./games/games";
 import { Blog } from "./blog/blog";
+import { IDictionary } from "../translator/dictionaries/interface";
 
 export enum PagesEnum {
     home = 'home',
@@ -16,6 +17,7 @@ export enum PagesEnum {
 export interface IPage {
     name: PagesEnum,
     path: `/${PagesEnum}` | '/',
+    translateKey: keyof IDictionary,
     link: React.FC,
 }
 
@@ -33,36 +35,42 @@ export const Pages: IPages = {
         name: PagesEnum.home,
         path: '/',
         link: Home,
+        translateKey: 'NAV_MAIN',
     },
     [PagesEnum.info]:
     {
         name: PagesEnum.info,
         path: `/${PagesEnum.info}`,
         link: Info,
+        translateKey: 'NAV_INFO'
     },
     [PagesEnum.animation]:
     {
         name: PagesEnum.animation,
         path: `/${PagesEnum.animation}`,
         link: Animation,
+        translateKey: 'NAV_ANIMATION'
     },
     [PagesEnum.games]:
     {
         name: PagesEnum.games,
         path: `/${PagesEnum.games}`,
         link: Games,
+        translateKey: 'NAV_GAMES'
     },
     [PagesEnum.blog]:
     {
         name: PagesEnum.blog,
         path: `/${PagesEnum.blog}`,
         link: Blog,
+        translateKey: 'NAV_BLOG'
     },
 };
 
 export interface INavItem {
     name: PagesEnum,
     path: '/' | `/${PagesEnum}`,
+    translateKey: keyof IDictionary,
 }
 
 const createLinkList = () => {
@@ -72,6 +80,7 @@ const createLinkList = () => {
         const item: INavItem = {
             name: Pages[key].name,
             path: Pages[key].path,
+            translateKey: Pages[key].translateKey,
         }
         list.push(item);
     }

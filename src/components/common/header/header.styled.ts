@@ -8,6 +8,7 @@ export const HeaderStyle = styled.header`
 `;
 
 export const HeaderWrap = styled.div`
+    position: relative;
     max-width: ${({ theme }) => theme.constants.maxAppSize};
     width: 100%;
     display: flex;
@@ -35,6 +36,8 @@ export const LogoName = styled.div`
 `;
 
 export const AuthorName = styled.h1`
+  display: flex;
+  gap: 1rem;
   font-size: 1.2rem;
 `;
 
@@ -53,4 +56,12 @@ export const ThemeWrap = styled.div`
   width: calc(${({ theme }) => theme.constants.iconSize} * 2.5);
   height: ${({ theme }) => theme.constants.iconSize};
   border-radius: 50%;
+`;
+
+export const NavWrap = styled.div`
+  width: 100%;
+  position: absolute;
+  bottom: -120%;
+  display: flex;
+  justify-content: right;
 `;
