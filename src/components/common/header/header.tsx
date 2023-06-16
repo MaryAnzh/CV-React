@@ -52,6 +52,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                         </AuthorName>
                     </LogoName>
                     <SettingsSection>
+                        <LanguageSelector />
                         <ThemeWrap>
                             <ThemeButton
                                 name={ThemeEnum.light}
@@ -62,7 +63,6 @@ export const Header: React.FC<HeaderProps> = (props) => {
                                 changeTheme={changeTheme}
                                 isAnimationStart={animationStart} />
                         </ThemeWrap>
-                        <LanguageSelector />
                     </SettingsSection>
                 </HeaderTop>
                 <NavWrap>

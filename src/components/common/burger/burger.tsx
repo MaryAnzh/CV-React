@@ -1,10 +1,18 @@
 import React from "react";
-import { BurgerStyle } from "./burger.styled";
+import {
+    BurgerStyle,
+    BurgerLine
+} from "./burger.styled";
 
 export const Burger = () => {
-    return(
+    const lineCount = 3;
+    const lines = [...Array(lineCount).keys()].map((el) => {
+        return (<BurgerLine key={el}></BurgerLine>);
+    });
+
+    return (
         <BurgerStyle>
-            
+            {lines}
         </BurgerStyle>
     );
 }

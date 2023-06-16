@@ -5,6 +5,7 @@ export const themeConst: IThemeConst = {
   black: '#333',
   white: '#ffffff',
   iconSize: '2rem',
+  borderRadius: '6px',
   mediaPhonePoint: '500px',
   mediaTabletPoint: '680px'
 }
