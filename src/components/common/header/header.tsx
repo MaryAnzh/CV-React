@@ -7,6 +7,9 @@ import { IThemes } from "../../../themes/themes";
 import { LanguageSelector } from "../../smart/lang-selector/langSelector";
 import { Text } from "../../smart/text/text";
 import { ThemeButton } from "../themeButton/themeButton";
+import { Nav } from "../nav/nav";
+import { Burger } from "../burger/burger";
+
 import {
     HeaderStyle,
     HeaderWrap,
@@ -17,7 +20,6 @@ import {
     HeaderTop,
     NavWrap
 } from "./header.styled";
-import { Nav } from "../nav/nav";
 
 type HeaderProps = {
     changeTheme: (name: keyof IThemes) => void
@@ -65,6 +67,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                 </HeaderTop>
                 <NavWrap>
                     <Nav />
+                    <Burger />
                 </NavWrap>
             </HeaderWrap>
         </HeaderStyle>

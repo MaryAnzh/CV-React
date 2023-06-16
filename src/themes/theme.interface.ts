@@ -4,6 +4,7 @@ export interface IThemeConst {
     white: string,
     iconSize: string,
     mediaPhonePoint: string,
+    mediaTabletPoint: string,
 }
 
 export interface IThemeColors {
