@@ -6,6 +6,7 @@ export interface IThemeConst {
     borderRadius: string,
     mediaPhonePoint: string,
     mediaTabletPoint: string,
+    burgerLineHight: string, 
 }
 
 export interface IThemeColors {

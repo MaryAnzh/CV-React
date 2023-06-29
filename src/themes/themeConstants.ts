@@ -7,5 +7,6 @@ export const themeConst: IThemeConst = {
   iconSize: '2rem',
   borderRadius: '6px',
   mediaPhonePoint: '500px',
-  mediaTabletPoint: '680px'
+  mediaTabletPoint: '680px',
+  burgerLineHight: '2px',
 }
