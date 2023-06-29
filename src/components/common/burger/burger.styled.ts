@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BurgerStyle = styled.div`
+export const BurgerStyle = styled.div<{ open: boolean }>`
    display: none;
    position: relative;
    width: ${({ theme }) => theme.constants.iconSize};
@@ -19,14 +19,21 @@ export const BurgerStyle = styled.div`
    }
 
    div:nth-child(1) {
-     top: calc(25% - ${({ theme }) => theme.constants.burgerLineHight}/2);
-   }
+     top: ${({ open, theme }) => open ? 'calc(50% - ' + theme.constants.burgerLineHight + '/2)' : 'calc(25% - ' + theme.constants.burgerLineHight + '/2)'};
+     transform: rotate(${({open}) => open ? '45deg' : '0'});
+     transition: top ${({open}) => open ? '.2s' : '.2s .2s'}, transform ${({open}) => open ? '.2s .2s' : '.2s'};
+    }
+
    div:nth-child(2) {
     top: calc(50% - ${({ theme }) => theme.constants.burgerLineHight}/2);
-    }
-    div:nth-child(3) {
-        top: calc(75% - ${({ theme }) => theme.constants.burgerLineHight}/2);
+     opacity: ${({ open }) => open ? '0' : '1'};
+     transition: opacity .3s;
+   }
 
+    div:nth-child(3) {
+     top: ${({ open, theme }) => open ? 'calc(50% - ' + theme.constants.burgerLineHight + '/2)' : 'calc(75% - ' + theme.constants.burgerLineHight + '/2)'};
+     transform: rotate(${({open}) => open ? '-45deg' : '0'});
+     transition: top ${({open}) => open ? '.2s' : '.2s .2s'}, transform ${({open}) => open ? '.2s .2s' : '.2s'};
     }
 
    @media (max-width: ${({ theme }) => theme.constants.mediaTabletPoint}) {
