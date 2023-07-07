@@ -15,18 +15,20 @@ import {
 
 export const Burger = () => {
     const location = useLocation();
+    const [open, setOpen] = useState(false);
+
     const listItem = navList.map((el) => {
         return (
-            <BurgerNavItem key={el.name} isActive={location.pathname === el.path}>
+            <BurgerNavItem
+                key={el.name}
+                isActive={location.pathname === el.path}
+                open={open}>
                 <Link to={el.path}>
                     <Text tid={el.translateKey} />
                 </Link>
             </BurgerNavItem>
         )
     });
-
-    const [open, setOpen] = useState(false);
-
     const onClick = () => {
         setOpen((prev) => prev = !open);
     }
@@ -41,7 +43,9 @@ export const Burger = () => {
                 <BurgerLine></BurgerLine>
                 <BurgerLine></BurgerLine>
             </BurgerIconStyle>
-            <BurgerNavPanel className='burger__panel'>
+            <BurgerNavPanel
+                className='burger__panel'
+                open={open}>
                 {listItem}
             </BurgerNavPanel>
         </BurgerStyle>

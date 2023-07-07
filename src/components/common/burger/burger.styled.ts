@@ -21,6 +21,7 @@ export const BurgerIconStyle = styled.div<{ open: boolean }>`
    flex-direction: column;
    border: 1px solid ${({ theme }) => theme.colors.contrast};
    border-radius: ${({ theme }) => theme.constants.borderRadius};
+   background-color: ${({ theme }) => theme.colors.main};
    opacity: 0.8;
    transition: all .3s;
    cursor: pointer;
@@ -59,29 +60,39 @@ export const BurgerLine = styled.div`
   background: ${({ theme }) => theme.colors.contrast};
 `;
 
-export const BurgerNavPanel = styled.ul`
+export const BurgerNavPanel = styled.ul<{ open: boolean }>`
   position: absolute;
+  width: ${({ open }) => open ? '145px' : '0px'};
+  height: ${({ open }) => open ? '185px' : '0px'};
   right: -0.4rem;
   top: -0.4rem;
-  padding: calc(1rem + ${({ theme }) => theme.constants.iconSize}) 0;
-  padding-bottom: 1rem;
+  padding: calc(1rem + ${({ theme, open }) => open ? theme.constants.iconSize : '-1rem'}) 0;
+  padding-bottom: ${({ open }) => open ? '1rem' : '0rem'};
   border: 1px solid ${({ theme }) => theme.colors.contrast};
   border-radius: 6px;
+  opacity: ${({ open }) => open ? '1' : '0'};
+  transition: width .3s, height .3s, opacity ${({ open }) => open ? '0s' : '.3s 0s'};
+  overflow: hidden;
   z-index: 1;
 `;
 
-export const BurgerNavItem = styled.li<{ isActive: boolean }>`
-  padding: 0 1rem;
+export const BurgerNavItem = styled.li<{ isActive: boolean, open: boolean }>`
   text-transform: uppercase;
-  transition: all.3s;
   background-color: ${({ theme, isActive }) => isActive ? theme.colors.contrast : theme.colors.main};
+  opacity: ${({ open }) => open ? '1' : '0'};
+  transition: background-color .3s, opacity ${({ open }) => open ? '1s .1s' : '0s'};
+  pointer-events: ${({ isActive }) => isActive ? 'none' : 'all'};
 
-  
   a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding: 0 1rem;
     color: ${({ theme, isActive }) => isActive ? theme.colors.main : theme.colors.contrast};
     font-size: 1.25rem;
     font-weight: 100;
-    transition: all.3s;
+    transition: all .3s;
   }
 
   &:hover {
