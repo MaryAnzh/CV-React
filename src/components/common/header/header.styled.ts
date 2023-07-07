@@ -13,7 +13,7 @@ export const HeaderWrap = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 `;
 
 export const HeaderTop = styled.div`
@@ -61,8 +61,6 @@ export const ThemeWrap = styled.div`
 
 export const NavWrap = styled.div`
   width: 100%;
-  position: absolute;
-  bottom: -120%;
   display: flex;
   justify-content: right;
 `;

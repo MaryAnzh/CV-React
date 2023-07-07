@@ -1,12 +1,12 @@
 export interface IThemeConst {
-    maxAppSize: number,
+    maxAppSize: string,
     black: string,
     white: string,
     iconSize: string,
     borderRadius: string,
     mediaPhonePoint: string,
     mediaTabletPoint: string,
-    burgerLineHight: string, 
+    burgerLineHight: string,
 }
 
 export interface IThemeColors {

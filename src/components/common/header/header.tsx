@@ -65,7 +65,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
                         </ThemeWrap>
                     </SettingsSection>
                 </HeaderTop>
-                <NavWrap>
+                <NavWrap className='header__nav-wrap'>
                     <Nav />
                     <Burger />
                 </NavWrap>

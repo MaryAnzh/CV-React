@@ -13,6 +13,7 @@ export const Burger = () => {
 
     return (
         <BurgerStyle
+            className='burger'
             open={open}
             onClick={onClick}>
             <BurgerLine></BurgerLine>

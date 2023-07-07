@@ -20,8 +20,8 @@ export const BurgerStyle = styled.div<{ open: boolean }>`
 
    div:nth-child(1) {
      top: ${({ open, theme }) => open ? 'calc(50% - ' + theme.constants.burgerLineHight + '/2)' : 'calc(25% - ' + theme.constants.burgerLineHight + '/2)'};
-     transform: rotate(${({open}) => open ? '45deg' : '0'});
-     transition: top ${({open}) => open ? '.2s' : '.2s .2s'}, transform ${({open}) => open ? '.2s .2s' : '.2s'};
+     transform: rotate(${({ open }) => open ? '45deg' : '0'});
+     transition: top ${({ open }) => open ? '.2s' : '.2s .2s'}, transform ${({ open }) => open ? '.2s .2s' : '.2s'};
     }
 
    div:nth-child(2) {
@@ -32,8 +32,8 @@ export const BurgerStyle = styled.div<{ open: boolean }>`
 
     div:nth-child(3) {
      top: ${({ open, theme }) => open ? 'calc(50% - ' + theme.constants.burgerLineHight + '/2)' : 'calc(75% - ' + theme.constants.burgerLineHight + '/2)'};
-     transform: rotate(${({open}) => open ? '-45deg' : '0'});
-     transition: top ${({open}) => open ? '.2s' : '.2s .2s'}, transform ${({open}) => open ? '.2s .2s' : '.2s'};
+     transform: rotate(${({ open }) => open ? '-45deg' : '0'});
+     transition: top ${({ open }) => open ? '.2s' : '.2s .2s'}, transform ${({ open }) => open ? '.2s .2s' : '.2s'};
     }
 
    @media (max-width: ${({ theme }) => theme.constants.mediaTabletPoint}) {
