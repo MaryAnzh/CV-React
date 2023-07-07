@@ -70,13 +70,15 @@ export const BurgerNavPanel = styled.ul`
   z-index: 1;
 `;
 
-export const BurgerNavItem = styled.li`
+export const BurgerNavItem = styled.li<{ isActive: boolean }>`
   padding: 0 1rem;
   text-transform: uppercase;
   transition: all.3s;
+  background-color: ${({ theme, isActive }) => isActive ? theme.colors.contrast : theme.colors.main};
+
   
   a {
-    color: ${({ theme }) => theme.colors.contrast};
+    color: ${({ theme, isActive }) => isActive ? theme.colors.main : theme.colors.contrast};
     font-size: 1.25rem;
     font-weight: 100;
     transition: all.3s;
