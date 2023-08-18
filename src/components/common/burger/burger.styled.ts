@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const BurgerStyle = styled.div`
   display: none;
@@ -39,9 +39,12 @@ export const BurgerIconStyle = styled.div<{ open: boolean }>`
     }
 
    div:nth-child(2) {
-    top: calc(50% - ${({ theme }) => theme.constants.burgerLineHight}/2);
-     opacity: ${({ open }) => open ? '0' : '1'};
-     transition: opacity .3s;
+    ${({ theme, open }) =>
+    css`
+      top: calc(50% - ${theme.constants.burgerLineHight}/2);
+      opacity: ${open ? '0' : '1'};
+      transition: opacity .3s;
+    `};
    }
 
     div:nth-child(3) {
@@ -76,12 +79,15 @@ export const BurgerNavPanel = styled.ul<{ open: boolean }>`
   z-index: 1;
 `;
 
-export const BurgerNavItem = styled.li<{ isActive: boolean, open: boolean }>`
+export const BurgerNavItem = styled.li.withConfig({
+  shouldForwardProp: (prop) => prop !== 'active'
+})
+  <{ active: boolean, open: boolean }>`
   text-transform: uppercase;
-  background-color: ${({ theme, isActive }) => isActive ? theme.colors.contrast : theme.colors.main};
+  background-color: ${({ theme, active }) => active ? theme.colors.contrast : theme.colors.main};
   opacity: ${({ open }) => open ? '1' : '0'};
   transition: background-color .3s, opacity ${({ open }) => open ? '1s .1s' : '0s'};
-  pointer-events: ${({ isActive }) => isActive ? 'none' : 'all'};
+  pointer-events: ${({ active }) => active ? 'none' : 'all'};
 
   a {
     display: flex;
@@ -89,7 +95,7 @@ export const BurgerNavItem = styled.li<{ isActive: boolean, open: boolean }>`
     height: 100%;
     justify-content: center;
     padding: 0 1rem;
-    color: ${({ theme, isActive }) => isActive ? theme.colors.main : theme.colors.contrast};
+    color: ${({ theme, active }) => active ? theme.colors.main : theme.colors.contrast};
     font-size: 1.25rem;
     font-weight: 100;
     transition: all .3s;

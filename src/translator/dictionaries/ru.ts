@@ -7,4 +7,5 @@ export const ru: IDictionary = {
     NAV_ANIMATION: 'анимация',
     NAV_GAMES: 'игры',
     NAV_BLOG: 'блог',
+    ABOUT_TITLE: 'Обо мне'
 }

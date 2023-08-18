@@ -7,4 +7,5 @@ export const en: IDictionary = {
     NAV_ANIMATION: 'animation',
     NAV_GAMES: 'games',
     NAV_BLOG: 'blog',
+    ABOUT_TITLE: 'About'
 }

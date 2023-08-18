@@ -14,7 +14,8 @@ export const Nav = () => {
     const location = useLocation();
     const listItem = navList.map((el) => {
         return (
-            <NavItem key={el.name} isActive={location.pathname === el.path}>
+            <NavItem key={el.name} 
+            $current={location.pathname === el.path}>
                 <Link to={el.path}>
                     <Text tid={el.translateKey} />
                 </Link>

@@ -1,12 +1,16 @@
 import React from 'react';
+
+import { About } from '../../components/sections/about/about';
+import { Banner } from '../../components/sections/banner/banner';
 import { PageTitle } from '../../AppStyle';
 import { HomeStyle } from './home.styled';
 
-export const Home = () => {
+export const Home: React.FC = () => {
     return (
         <HomeStyle>
-            <PageTitle>
-            </PageTitle>
+            <Banner />
+            <PageTitle></PageTitle>
+            <About />
         </HomeStyle>
     );
 }

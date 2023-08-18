@@ -9,9 +9,9 @@ export const NavStyle = styled.nav`
   }
 `;
 
-export const NavItem = styled.li<{ isActive: boolean }>`
+export const NavItem = styled.li<{ $current: boolean }>`
   text-transform: uppercase;
-  text-decoration: ${({ isActive }) => isActive ? 'underline' : 'none'};
+  text-decoration: ${({ $current }) => $current ? 'underline' : 'none'};
   
   a {
     color: ${({ theme }) => theme.colors.contrast};

@@ -6,4 +6,5 @@ export interface IDictionary {
     NAV_ANIMATION: string,
     NAV_GAMES: string,
     NAV_BLOG: string,
+    ABOUT_TITLE: string
 }

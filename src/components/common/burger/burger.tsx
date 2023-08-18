@@ -17,14 +17,15 @@ export const Burger = () => {
     const location = useLocation();
     const [open, setOpen] = useState(false);
 
-    const listItem = navList.map((el) => {
+    const listItem = navList.map(({ name, path, translateKey }) => {
+        const active = false;
         return (
             <BurgerNavItem
-                key={el.name}
-                isActive={location.pathname === el.path}
+                key={name}
+                active={active}
                 open={open}>
-                <Link to={el.path}>
-                    <Text tid={el.translateKey} />
+                <Link to={path}>
+                    <Text tid={translateKey} />
                 </Link>
             </BurgerNavItem>
         )
