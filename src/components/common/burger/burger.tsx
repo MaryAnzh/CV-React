@@ -18,7 +18,7 @@ export const Burger = () => {
     const [open, setOpen] = useState(false);
 
     const listItem = navList.map(({ name, path, translateKey }) => {
-        const active = false;
+        const active: boolean = location.pathname === path;
         return (
             <BurgerNavItem
                 key={name}
@@ -30,8 +30,9 @@ export const Burger = () => {
             </BurgerNavItem>
         )
     });
+
     const onClick = () => {
-        setOpen((prev) => prev = !open);
+        setOpen(() => !open);
     }
 
     return (

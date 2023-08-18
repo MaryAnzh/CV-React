@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, useState } from "react";
+import React, { useState } from "react";
 import { IProvider, LanguageContext, LanguageEnum, dictionaryList } from "./context";
 
 export type LanguageProviderProps = {
@@ -26,7 +26,7 @@ export const LanguageProvider = ({ children }: {
             if (defaultLanguage !== null) {
                 const lang = defaultLanguage as LanguageEnum;
                 if (lang) {
-                    setUserLanguage((prev) => prev = lang);
+                    setUserLanguage(() => lang);
                 }
             }
         }

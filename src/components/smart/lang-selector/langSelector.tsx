@@ -1,9 +1,8 @@
-import React, { ChangeEvent, Context, useContext } from 'react';
-import { IProvider, LanguageEnum, languageOptions } from '../../../translator/context';
-import { LanguageContext } from '../../../translator/context';
+import React, { ChangeEvent, useContext } from 'react';
+import { LanguageContext, LanguageEnum, languageOptions } from '../../../translator/context';
 
 
-export const LanguageSelector = () => {
+export const LanguageSelector: React.FC = () => {
     const { userLanguage, userLanguageChange } = useContext(LanguageContext);
 
     const handleLanguageChange = (e: ChangeEvent<HTMLSelectElement>) => {
