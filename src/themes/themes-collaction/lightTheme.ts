@@ -4,6 +4,10 @@ import { themeConst } from "../themeConstants";
 const colors: IThemeColors = {
     main: '#ffffff',
     contrast: '#333',
+    arrow: 'white',
+    arrowHover: 'gray',
+    button: '#D8D8D8',
+    buttonHover: '#eee'
 }
 
 export const lightTheme: ITheme = {

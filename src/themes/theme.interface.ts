@@ -14,6 +14,10 @@ export interface IThemeConst {
 export interface IThemeColors {
     main: string,
     contrast: string,
+    arrow: string,
+    arrowHover: string,
+    button: string,
+    buttonHover: string
 }
 
 export interface ITheme {

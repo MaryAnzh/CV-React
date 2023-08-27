@@ -1,39 +1,52 @@
 import React from "react";
 
+import { ArrowSVG } from "../../svg/arrow/arrow";
 import {
     CarouselWrap,
     CarouselContainer,
     CarouselBodyWrap,
     CarouselBody,
-    CarouselCardFront,
-    CarouselCardBack
+    CarouselCard,
+    CarouselButton
 } from "./carousel.styled";
 
 export const Carousel: React.FC = () => {
-    const list = [...Array(8).keys()].map((el) => {
+    const cards = [...Array(8).keys()].map((el) => {
         return (
-            <CarouselCardFront key={el} index={el} />
+            <CarouselCard
+                key={el}
+                index={el}
+                type='front' />
         );
     });
 
-    const listBack = [...Array(8).keys()].map((el) => {
+    const cardsBAck = [...Array(8).keys()].map((el) => {
         return (
-            <CarouselCardBack key={el} index={el} />
+            <CarouselCard
+                key={el}
+                index={el}
+                type='back' />
         );
     });
 
     return (
         <CarouselWrap>
+            <CarouselButton direction='prev'>
+                <ArrowSVG deration='prev' />
+            </CarouselButton>
             <CarouselContainer>
                 <CarouselBodyWrap>
                     <CarouselBody>
                         <CarouselBody>
-                            {listBack}
-                            {list}
+                            {cardsBAck}
+                            {cards}
                         </CarouselBody>
                     </CarouselBody>
                 </CarouselBodyWrap>
             </CarouselContainer>
+            <CarouselButton direction='nest'>
+                <ArrowSVG deration='next' />
+            </CarouselButton>
         </CarouselWrap>
     );
 }
