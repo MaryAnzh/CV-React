@@ -8,6 +8,8 @@ const colors: IThemeColors = {
     arrowHover: '#ffffff',
     button: 'none',
     buttonHover: 'none',
+    card: '#333',
+    cardBorder: '#ffffff',
 }
 
 export const blackTheme: ITheme = {

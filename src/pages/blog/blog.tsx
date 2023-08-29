@@ -7,8 +7,9 @@ export const Blog = () => {
     return (
         <BlogStyle>
             <PageTitle>
-            <Text tid='NAV_BLOG'/>
+                <Text tid='NAV_BLOG' />
             </PageTitle>
+            <Text tid='PROGRESS' />
         </BlogStyle>
     );
 }

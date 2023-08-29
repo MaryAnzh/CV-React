@@ -8,8 +8,9 @@ export const Animation = () => {
     return (
         <AnimationStyle>
             <PageTitle>
-                <Text tid='NAV_ANIMATION'/>
+                <Text tid='NAV_ANIMATION' />
             </PageTitle>
+            <Text tid='PROGRESS' />
         </AnimationStyle>
     );
 }

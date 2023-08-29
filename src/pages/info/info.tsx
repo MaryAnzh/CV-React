@@ -7,8 +7,9 @@ export const Info = () => {
     return (
         <InfoStyle>
             <PageTitle>
-            <Text tid='NAV_INFO'/>
+                <Text tid='NAV_INFO' />
             </PageTitle>
+            <Text tid='PROGRESS' />
         </InfoStyle>
     );
 }

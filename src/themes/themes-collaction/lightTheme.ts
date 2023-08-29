@@ -7,7 +7,9 @@ const colors: IThemeColors = {
     arrow: 'white',
     arrowHover: 'gray',
     button: '#D8D8D8',
-    buttonHover: '#eee'
+    buttonHover: '#eee',
+    card: '#eee',
+    cardBorder: 'transparent',
 }
 
 export const lightTheme: ITheme = {

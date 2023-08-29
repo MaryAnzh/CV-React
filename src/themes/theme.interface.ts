@@ -17,7 +17,9 @@ export interface IThemeColors {
     arrow: string,
     arrowHover: string,
     button: string,
-    buttonHover: string
+    buttonHover: string,
+    card: string,
+    cardBorder: string,
 }
 
 export interface ITheme {

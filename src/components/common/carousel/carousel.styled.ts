@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import { carouselConst } from "./carousel.const";
 
 export const CarouselWrap = styled.div`
+  max-width: 860px;
   width: 100%;
   height: ${carouselConst.wrapHight}px;
   padding: 10px;
@@ -9,7 +10,7 @@ export const CarouselWrap = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 800px) {
+  @media (max-width: 860px) {
     display: none;
   }
 `;
@@ -20,19 +21,24 @@ export const CarouselContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
+  transform:  translateY(-40px) rotateX(-6deg) perspective(1000px);
 `;
 
-export const CarouselBodyWrap = styled.div`
-  width: 200px;
-  height:150px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform-style: preserve-3d;
-  transition: all .3s;
-  transform:  rotateX(-6deg) translateY(-40px);
-  perspective: 1000px;
+export const CarouselBodyWrap = styled.div<{ angle: number }>`
+  ${({ angle }) => css`
+    width: ${carouselConst.cardHight}px;
+    height: ${carouselConst.cardHight}px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform:  rotateY(${angle}deg);
+    transition: all .3s;
+  `}
+  
+  /* perspective: 1000px; */
   /* animation: spin linear 10s infinite; */
   
   @keyframes spin {
@@ -66,14 +72,15 @@ export const CarouselCard = styled.div<{ index: number, type: 'back' | 'front' }
     transform-style: preserve-3d;
     border-radius: 8px;
     transform: rotateY(${45 * index}deg) translateZ(290px);
-    background-color: ${type === 'front' ? '#eee' : 'gray'};
+    background-color: ${type === 'front' ? theme.colors.card : 'gray'};
+    border: 1px solid ${type === 'front' ? theme.colors.cardBorder : 'transparent'};
     backface-visibility: ${type == 'front' ? 'hidden' : 'visible'};
     z-index: ${type === 'front' ? '5' : '4'};
     `}
 `;
 
-export const CarouselButton = styled.button<{ direction: 'prev' | 'nest' }>`
-  ${({ type, theme }) =>
+export const CarouselButton = styled.button<{ direction: 'prev' | 'nest', $disabled: boolean }>`
+  ${({ $disabled, theme }) =>
     css`
       width: ${carouselConst.buttonSize}px;
       height: ${carouselConst.buttonSize}px;
@@ -83,8 +90,10 @@ export const CarouselButton = styled.button<{ direction: 'prev' | 'nest' }>`
       border-radius: 50%;
       background: ${theme.colors.button};
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 25%);
-      cursor: pointer;
-      transition: .3s;
+      cursor: ${$disabled ? 'none' : 'pointer'};
+      pointer-events: ${$disabled ? 'none' : 'all'};
+      opacity: ${$disabled ? '0.5' : '1'};
+      transition: .3s;;
 
       &:hover {
         background: ${theme.colors.buttonHover};

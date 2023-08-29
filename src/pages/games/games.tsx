@@ -7,8 +7,9 @@ export const Games = () => {
     return (
         <GamesStyle>
             <PageTitle>
-            <Text tid='NAV_GAMES'/>
+                <Text tid='NAV_GAMES' />
             </PageTitle>
+            <Text tid='PROGRESS' />
         </GamesStyle>
     );
 }
