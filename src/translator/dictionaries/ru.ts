@@ -3,6 +3,7 @@ import { IDictionary } from "./interface";
 export const ru: IDictionary = {
     AUTHOR: 'Мария Ващаева',
     PROGRESS: 'в разработке...',
+    SPHERE_3D: 'Css 3D Sphere в работе с 29/08/2023...',
     NAV_MAIN: 'Главная',
     NAV_INFO: 'Инфо',
     NAV_ANIMATION: 'анимация',

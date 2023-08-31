@@ -2,6 +2,7 @@
 export interface IDictionary {
     AUTHOR: string,
     PROGRESS: string,
+    SPHERE_3D: string,
     NAV_MAIN: string,
     NAV_INFO: string,
     NAV_ANIMATION: string,

@@ -1,34 +1,57 @@
-import React from "react";
+import React, { memo } from "react";
 
 import {
-    SphereWrapStyle,
-    SphereStyle,
-    Parallel,
-    Dot,
-    CarouselBody,
-    CarouselCard,
-    CarouselCardBackFace,
-    CarouselWrap,
-    CarouselContainer,
-    CarouselBodyWrap
+    SphereSpace,
+    SphereWrap,
+    SphereLine,
+    SphereDot,
+    SphereText
 } from "./sphere,styled";
 
-export const Sphere: React.FC = () => {
-    const dotsFront = [...Array(36).keys()].map((el: number) => {
-        return (
-            <Dot
-                key={el}
-                $front={true}
-                index={el} />
-        );
-    });
-    const dotsBack = [...Array(36).keys()].map((el: number) => {
-        return (
-            <Dot
-                key={el}
-                $front={false}
-                index={el} />
-        );
-    });
-    return <></>;
+type SphereProps = {
+    spin: boolean,
 }
+
+export const Sphere: React.FC<SphereProps> = ({ spin }) => {
+    const angleStep = 10;
+
+    const dotListFront = [...Array(36).keys()].map((el) => {
+        const dotAngle = el * angleStep;
+        return (
+            <SphereDot
+                key={el}
+                angle={dotAngle}
+                type='front' />
+        );
+    });
+    const dotListBack = [...Array(36).keys()].map((el) => {
+        const dotAngle = el * angleStep;
+        return (
+            <SphereDot
+                key={el}
+                angle={dotAngle}
+                type='back' />
+        );
+    });
+
+    const lineList = [...Array(24).keys()].map((el) => {
+        const lineAngle = (360 / 24) * el;
+        return (
+            <SphereLine key={el} angle={lineAngle} >
+                {dotListBack}
+                {dotListFront}
+            </SphereLine>
+        );
+    })
+
+    return (
+        <SphereSpace>
+            <SphereText>
+                CSS and JS
+            </SphereText>
+            <SphereWrap $spin={spin}>
+                {lineList}
+            </SphereWrap>
+        </ SphereSpace>
+    );
+};

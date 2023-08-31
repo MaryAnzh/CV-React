@@ -20,6 +20,8 @@ export interface IThemeColors {
     buttonHover: string,
     card: string,
     cardBorder: string,
+    dot: string,
+    dotAlfa: number,
 }
 
 export interface ITheme {

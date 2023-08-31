@@ -1,15 +1,17 @@
 import { ITheme, IThemeColors, ThemeEnum } from "../theme.interface";
-import { themeConst } from "../themeConstants";
+import { themeConst, palette } from "../themeConstants";
 
 const colors: IThemeColors = {
-    main: '#ffffff',
-    contrast: '#333',
-    arrow: 'white',
+    main: palette.white,
+    contrast: palette.black,
+    arrow: palette.white,
     arrowHover: 'gray',
-    button: '#D8D8D8',
-    buttonHover: '#eee',
-    card: '#eee',
+    button: palette.lightGray_1,
+    buttonHover: palette.lightGray,
+    card: palette.lightGray,
     cardBorder: 'transparent',
+    dot: 'pink',
+    dotAlfa: 25,
 }
 
 export const lightTheme: ITheme = {

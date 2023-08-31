@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { carouselConst } from "./carousel.const";
 
 export const CarouselWrap = styled.div`
-  max-width: 860px;
+  max-width: ${carouselConst.carouselWidth}px;
   width: 100%;
   height: ${carouselConst.wrapHight}px;
   padding: 10px;
@@ -10,7 +10,7 @@ export const CarouselWrap = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 860px) {
+  @media (max-width: ${carouselConst.carouselWidth}px) {
     display: none;
   }
 `;
@@ -27,7 +27,7 @@ export const CarouselContainer = styled.div`
 
 export const CarouselBodyWrap = styled.div<{ angle: number }>`
   ${({ angle }) => css`
-    width: ${carouselConst.cardHight}px;
+    width: ${carouselConst.cardWidth}px;
     height: ${carouselConst.cardHight}px;
     position: relative;
     display: flex;
@@ -35,28 +35,20 @@ export const CarouselBodyWrap = styled.div<{ angle: number }>`
     align-items: center;
     transform-style: preserve-3d;
     transform:  rotateY(${angle}deg);
-    transition: all .3s;
+    transition: all .5s;
   `}
-  
-  /* perspective: 1000px; */
-  /* animation: spin linear 10s infinite; */
-  
-  @keyframes spin {
-      0% {transform: perspective(1000px) rotateY(0deg)}
-      100% {transform: perspective(1000px) rotateY(-360deg)}
-    }
 `;
 
 export const CarouselBody = styled.div`
-  width: 200px;
-  height:150px;
+    width: 100%;
+    height: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   transform-style: preserve-3d;
   transform-origin: center;
-  transition: all .3s;
+  transition: all .6s;
 `;
 
 export const CarouselCard = styled.div<{ index: number, type: 'back' | 'front' }>`

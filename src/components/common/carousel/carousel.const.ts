@@ -1,4 +1,5 @@
 interface ICarouselConst {
+    carouselWidth: number,
     cardWidth: number,
     cardHight: number,
     wrapHight: number,
@@ -7,6 +8,7 @@ interface ICarouselConst {
 }
 
 export const carouselConst: ICarouselConst = {
+    carouselWidth: 860,
     cardWidth: 200,
     cardHight: 150,
     wrapHight: 360,
