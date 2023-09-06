@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { About } from '../../components/sections/about/about';
 import { Banner } from '../../components/sections/banner/banner';
-import { Carousel } from '../../components/common/carousel/carousel.';
+import { About } from '../../components/sections/about/about';
+import { Skills } from '../../components/sections/skills/skills';
 
 import { PageTitle } from '../../AppStyle';
 import { HomeStyle } from './home.styled';
@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
             <Banner />
             <PageTitle></PageTitle>
             <About />
-            <Carousel />
+            <Skills />
         </HomeStyle>
     );
 }

@@ -17,4 +17,13 @@ export const en: IDictionary = {
     ABOUT_5: `In Info pages you can find info about my education, skills.`,
     ABOUT_6: `As time, I will add my games and articles about some features creation (with context, styled-component and css animation)`,
     SPIN: 'Press button for spin',
+    SKILLS: 'Skills',
+    SKILLS_JS: 'JavaScript',
+    SKILLS_CSS: 'CSS/SCSS',
+    SKILLS_HTML: 'HTML',
+    SKILLS_TS: 'TypeScript',
+    SKILLS_React: 'React',
+    SKILLS_ANgular: 'Angular',
+    SKILLS_ADDITION: 'Addition',
+    SKILLS_COMMON: 'Tools',
 }

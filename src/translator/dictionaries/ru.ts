@@ -16,5 +16,14 @@ export const ru: IDictionary = {
     ABOUT_4: `Перевод и Темы реализованы так же без дополнительных библиотек с использованием React Context, и styled-component `,
     ABOUT_5: `На странице Инфо вы можете найти информацию о моем образовании и навыках.`,
     ABOUT_6: `Со временем, Я планирую добавить игры и статьи, описывающие некоторые особенности приложения (использование Context для перевода, styled-component и css animation)`,
-    SPIN: 'Нажмите стрелку для вращения'
+    SPIN: 'Нажмите стрелку для вращения',
+    SKILLS: 'Навыки',
+    SKILLS_JS: 'JavaScript',
+    SKILLS_CSS: 'CSS/SCSS',
+    SKILLS_HTML: 'HTML',
+    SKILLS_TS: 'TypeScript',
+    SKILLS_React: 'React',
+    SKILLS_ANgular: 'Angular',
+    SKILLS_ADDITION: 'Другие',
+    SKILLS_COMMON: 'Инструменты'
 }

@@ -9,6 +9,7 @@ export interface IThemeConst {
     mediaTabletPoint: string,
     burgerLineHight: string,
     h2FontSize: string,
+    h4FontSize: string,
 }
 
 export interface IThemeColors {

@@ -2,6 +2,7 @@ import React, { useCallback, useState } from "react";
 
 
 import { Sphere } from "../../common/sphere/sphere";
+import { SphereClass } from "../../common/sphere-class/sphere-class";
 import {
     BannerStyled,
     SpinSphereButton
@@ -15,7 +16,8 @@ export const Banner: React.FC = () => {
 
     return (
         <BannerStyled>
-            <Sphere spin={spin} />
+            <SphereClass isSpin={spin} />
+            {/* <Sphere spin={spin} /> */}
             <SpinSphereButton
                 onClick={onClick}>
                 {spin ? 'Stop' : 'Spin'}

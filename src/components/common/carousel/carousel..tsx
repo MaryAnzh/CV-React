@@ -1,5 +1,7 @@
 import React, { useCallback, useState } from "react";
+import { ISkillCard } from "../../../data/skills.data";
 
+import { carouselConst } from "./carousel.const";
 import { ArrowSVG } from "../../svg/arrow/arrow";
 import {
     CarouselWrap,
@@ -7,27 +9,34 @@ import {
     CarouselBodyWrap,
     CarouselBody,
     CarouselCard,
+    CarouselCardTitle,
     CarouselButton
 } from "./carousel.styled";
 import { Text } from "../../smart/text/text";
 
-export const Carousel: React.FC = () => {
-    const [angle, setAngle] = useState<number>(0);
-    const angleStep = 45;
+type CarouselProps = {
+    cardsData: ISkillCard[],
+}
+
+export const Carousel: React.FC<CarouselProps> = ({ cardsData }) => {
+    const [angle, setAngle] = useState(0);
+    const angleStep = carouselConst.roundStep;
     const [isTransition, seIstTransition] = useState<boolean>(false);
 
-    const cards = [...Array(8).keys()].map((el) => {
+    const cards = cardsData.map((el, i) => {
         return (
             <CarouselCard
-                key={el}
-                index={el}
+                key={el.name}
+                index={i}
                 type='front'>
-                <Text tid='SPIN' />
+                <CarouselCardTitle>
+                    <Text tid={el.translateID} />
+                </CarouselCardTitle>
             </CarouselCard>
         );
     });
 
-    const cardsBAck = [...Array(8).keys()].map((el) => {
+    const cardsBAck = [...Array(carouselConst.cardsNumber).keys()].map((el) => {
         return (
             <CarouselCard
                 key={el}

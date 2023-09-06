@@ -15,5 +15,14 @@ export interface IDictionary {
     ABOUT_4: string,
     ABOUT_5: string,
     ABOUT_6: string,
-    SPIN: string
+    SPIN: string,
+    SKILLS: string,
+    SKILLS_JS: string,
+    SKILLS_CSS: string,
+    SKILLS_HTML: string,
+    SKILLS_TS: string,
+    SKILLS_React: string,
+    SKILLS_ANgular: string,
+    SKILLS_ADDITION: string,
+    SKILLS_COMMON: string
 }

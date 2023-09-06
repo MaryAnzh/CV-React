@@ -56,10 +56,10 @@ export const CarouselCard = styled.div<{ index: number, type: 'back' | 'front' }
     position: absolute;
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     transform-origin: center;
     transform-style: preserve-3d;
     border-radius: 8px;
@@ -69,6 +69,11 @@ export const CarouselCard = styled.div<{ index: number, type: 'back' | 'front' }
     backface-visibility: ${type == 'front' ? 'hidden' : 'visible'};
     z-index: ${type === 'front' ? '5' : '4'};
     `}
+`;
+
+export const CarouselCardTitle = styled.h4`
+      font-size: ${({ theme }) => theme.constants.h4FontSize};
+      font-weight: 300;
 `;
 
 export const CarouselButton = styled.button<{ direction: 'prev' | 'nest', $disabled: boolean }>`
@@ -100,3 +105,4 @@ export const CarouselButton = styled.button<{ direction: 'prev' | 'nest', $disab
       }
   `}
 `;
+

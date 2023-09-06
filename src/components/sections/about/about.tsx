@@ -1,14 +1,17 @@
 import React from "react";
 import { Text } from "../../smart/text/text";
 
-import { AboutStyle, AboutTitle } from "./about-styled";
+import {
+    SectionStyle,
+    SectionTitle
+} from "../section.styled";
 import { MyCard } from "./my-card/my-card";
 
 export const About = () => (
-    <AboutStyle>
-        <AboutTitle>
+    <SectionStyle>
+        <SectionTitle align='left'>
             <Text tid='ABOUT_TITLE' />
-            <MyCard />
-        </AboutTitle>
-    </AboutStyle>
+        </SectionTitle>
+        <MyCard />
+    </SectionStyle>
 )

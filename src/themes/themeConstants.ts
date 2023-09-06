@@ -17,5 +17,6 @@ export const themeConst: IThemeConst = {
   mediaPhonePoint: '500px',
   mediaTabletPoint: '680px',
   burgerLineHight: '2px',
-  h2FontSize: '2rem'
+  h2FontSize: '2rem',
+  h4FontSize: '1.6rem'
 }
