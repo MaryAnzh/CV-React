@@ -10,6 +10,13 @@ $space: 220px;
     justify-content: center;
     background: black;
 
+    &__title {
+       color: #ffffff;
+       font-size: 2rem;
+       font-weight: 200;
+       z-index: 2;
+    }
+
     &__wrap {
         position: absolute;
         width: 100%;

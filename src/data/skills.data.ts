@@ -15,7 +15,7 @@ export const SkillsData: ISkillCard[] = [
         addition: ['@keyframes animation', 'flex', 'transform animation']
     },
     { name: 'HTML', translateID: 'SKILLS_HTML' },
-    { name: 'TypeScript', translateID: 'SKILLS_JS' },
+    { name: 'TypeScript', translateID: 'SKILLS_TS' },
     {
         name: 'React',
         translateID: 'SKILLS_React',

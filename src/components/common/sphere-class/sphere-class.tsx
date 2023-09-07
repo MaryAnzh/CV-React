@@ -40,6 +40,7 @@ export class SphereClass extends React.Component<SphereClassProps> {
     render() {
         return (
             <div className='sphere-class'>
+                <h3 className="sphere-class__title">CSS 3d transform + JS</h3>
                 <div className='sphere-class__wrap'
                     style={{ animationPlayState: this.props.isSpin ? 'running' : 'paused' }}>
                     {this.sphere}

@@ -5,9 +5,8 @@ interface ICarouselConst {
     wrapHight: number,
     cardsInterval: number,
     buttonSize: number,
-    cardsNumber: number,
     roundDeg: number,
-    roundStep: number
+    roundStep: (cardsNumber: number) => number
 }
 
 export const carouselConst: ICarouselConst = {
@@ -18,6 +17,5 @@ export const carouselConst: ICarouselConst = {
     cardsInterval: 20,
     buttonSize: 50,
     roundDeg: 360,
-    cardsNumber: 8,
-    roundStep: 360 / 8,
+    roundStep(cardsNumber) { return this.roundDeg / cardsNumber },
 }

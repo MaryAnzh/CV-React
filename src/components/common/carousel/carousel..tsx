@@ -10,6 +10,8 @@ import {
     CarouselBody,
     CarouselCard,
     CarouselCardTitle,
+    CarouselCardList,
+    CarouselCardListItem,
     CarouselButton
 } from "./carousel.styled";
 import { Text } from "../../smart/text/text";
@@ -20,10 +22,17 @@ type CarouselProps = {
 
 export const Carousel: React.FC<CarouselProps> = ({ cardsData }) => {
     const [angle, setAngle] = useState(0);
-    const angleStep = carouselConst.roundStep;
+    const angleStep = carouselConst.roundStep(cardsData.length);
     const [isTransition, seIstTransition] = useState<boolean>(false);
 
     const cards = cardsData.map((el, i) => {
+        const items: JSX.Element[] | null = el.addition ?
+            el.addition.map(el => {
+                return (
+                    <CarouselCardListItem key={el}>{el}</CarouselCardListItem>
+                )
+            }) : null;
+
         return (
             <CarouselCard
                 key={el.name}
@@ -31,16 +40,20 @@ export const Carousel: React.FC<CarouselProps> = ({ cardsData }) => {
                 type='front'>
                 <CarouselCardTitle>
                     <Text tid={el.translateID} />
+                    {items &&
+                        <CarouselCardList>
+                            {items}
+                        </CarouselCardList>}
                 </CarouselCardTitle>
             </CarouselCard>
         );
     });
 
-    const cardsBAck = [...Array(carouselConst.cardsNumber).keys()].map((el) => {
+    const cardsBAck = cardsData.map((el, i) => {
         return (
             <CarouselCard
-                key={el}
-                index={el}
+                key={el.name}
+                index={i}
                 type='back' />
         );
     });

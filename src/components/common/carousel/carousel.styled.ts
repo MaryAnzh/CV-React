@@ -60,6 +60,7 @@ export const CarouselCard = styled.div<{ index: number, type: 'back' | 'front' }
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     transform-origin: center;
     transform-style: preserve-3d;
     border-radius: 8px;
@@ -74,6 +75,15 @@ export const CarouselCard = styled.div<{ index: number, type: 'back' | 'front' }
 export const CarouselCardTitle = styled.h4`
       font-size: ${({ theme }) => theme.constants.h4FontSize};
       font-weight: 300;
+`;
+export const CarouselCardList = styled.ul`
+  width: 100%;
+  padding-left: 0.5rem;
+  list-style: disc;
+`;
+export const CarouselCardListItem = styled.li`
+  color: ${({ theme }) => theme.colors.contrast};
+  font-size: 1rem;
 `;
 
 export const CarouselButton = styled.button<{ direction: 'prev' | 'nest', $disabled: boolean }>`
