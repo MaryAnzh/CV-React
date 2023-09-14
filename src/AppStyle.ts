@@ -15,6 +15,7 @@ export const MainStyle = styled.main`
 `;
 
 export const PageTitle = styled.h2`
+  padding: 1rem;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 200;

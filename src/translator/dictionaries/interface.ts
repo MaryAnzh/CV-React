@@ -24,5 +24,6 @@ export interface IDictionary {
     SKILLS_React: string,
     SKILLS_ANgular: string,
     SKILLS_ADDITION: string,
-    SKILLS_COMMON: string
+    SKILLS_COMMON: string,
+    EDUCATION_INFO: string,
 }

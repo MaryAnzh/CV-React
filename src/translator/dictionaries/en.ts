@@ -26,4 +26,5 @@ export const en: IDictionary = {
     SKILLS_ANgular: 'Angular',
     SKILLS_ADDITION: 'Addition',
     SKILLS_COMMON: 'Tools',
+    EDUCATION_INFO: 'On May 2021, I graduated from the Institute Business of BSU , Web Design and Computer Graphics, Software Designer.',
 }

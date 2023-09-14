@@ -25,5 +25,6 @@ export const ru: IDictionary = {
     SKILLS_React: 'React',
     SKILLS_ANgular: 'Angular',
     SKILLS_ADDITION: 'Другие',
-    SKILLS_COMMON: 'Инструменты'
+    SKILLS_COMMON: 'Инструменты',
+    EDUCATION_INFO: 'В 2021 году я окончила Институт Бизнеса БГУ, Web-дизайн и компьютерная графика, программист-дизайнер.',
 }

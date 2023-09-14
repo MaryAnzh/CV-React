@@ -12,6 +12,8 @@ const colors: IThemeColors = {
     cardBorder: 'transparent',
     dot: 'pink',
     dotAlfa: 25,
+    shadow: '3px 3px 6px rgba(0, 0, 0, 0.3)',
+
 }
 
 export const lightTheme: ITheme = {
