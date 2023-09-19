@@ -1,16 +1,15 @@
 import React from 'react';
-import { PageTitle } from '../../AppStyle';
+
 import { Text } from '../../components/smart/text/text';
+import { PageStyle, PageTitleStyle } from '../page.styled';
 
-import { AnimationStyle } from './animation.styled';
-
-export const Animation = () => {
+export const Animation: React.FC = () => {
     return (
-        <AnimationStyle>
-            <PageTitle>
+        <PageStyle>
+            <PageTitleStyle>
                 <Text tid='NAV_ANIMATION' />
-            </PageTitle>
+            </PageTitleStyle>
             <Text tid='PROGRESS' />
-        </AnimationStyle>
+        </PageStyle>
     );
 }

@@ -1,15 +1,15 @@
 import React from 'react';
-import { GamesStyle } from './games.styled';
-import { PageTitle } from '../../AppStyle';
-import { Text } from '../../components/smart/text/text';
 
-export const Games = () => {
+import { Text } from '../../components/smart/text/text';
+import { PageStyle, PageTitleStyle } from '../page.styled';
+
+export const Games: React.FC = () => {
     return (
-        <GamesStyle>
-            <PageTitle>
+        <PageStyle>
+            <PageStyle>
                 <Text tid='NAV_GAMES' />
-            </PageTitle>
+            </PageStyle>
             <Text tid='PROGRESS' />
-        </GamesStyle>
+        </PageStyle>
     );
 }

@@ -23,7 +23,8 @@ export interface IThemeColors {
     cardBorder: string,
     dot: string,
     dotAlfa: number,
-    shadow: string
+    shadow: string,
+    footer: string
 }
 
 export interface ITheme {

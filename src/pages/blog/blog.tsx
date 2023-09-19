@@ -1,15 +1,16 @@
 import React from 'react';
-import { BlogStyle } from './blog.styled';
-import { PageTitle } from '../../AppStyle';
-import { Text } from '../../components/smart/text/text';
 
-export const Blog = () => {
+import { Text } from '../../components/smart/text/text';
+import { PageStyle, PageTitleStyle } from '../page.styled';
+
+
+export const Blog: React.FC = () => {
     return (
-        <BlogStyle>
-            <PageTitle>
+        <PageStyle>
+            <PageTitleStyle>
                 <Text tid='NAV_BLOG' />
-            </PageTitle>
+            </PageTitleStyle>
             <Text tid='PROGRESS' />
-        </BlogStyle>
+        </PageStyle>
     );
 }

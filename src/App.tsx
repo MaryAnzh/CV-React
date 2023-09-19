@@ -6,6 +6,7 @@ import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 import { Header } from './components/common/header/header';
 import { Pages } from './pages/pages-const';
+import { Footer } from './components/common/footer/footer';
 
 import {
   AppStyle,
@@ -37,6 +38,7 @@ export const App = () => {
                 <Route path={Pages.blog.path} element={<Pages.blog.link />} />
               </Routes>
             </MainStyle>
+            <Footer />
           </AppStyle>
         </BrowserRouter>
       </ThemeContext.Provider>
