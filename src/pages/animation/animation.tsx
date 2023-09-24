@@ -1,9 +1,15 @@
 import React from 'react';
-import { AnimationStyle } from './animation';
 
-export const GamePage: React.FC = () => {
+import { Text } from '../../components/smart/text/text';
+import { PageStyle, PageTitleStyle } from '../page.styled';
+
+export const Animation: React.FC = () => {
     return (
-        <AnimationStyle>
-        </AnimationStyle >
+        <PageStyle>
+            <PageTitleStyle>
+                <Text tid='NAV_ANIMATION' />
+            </PageTitleStyle>
+            <Text tid='PROGRESS' />
+        </PageStyle>
     );
 }

@@ -15,8 +15,15 @@ export const ThemeButtonStyle = styled.button<ThemeButtonType>`
   cursor: pointer;
   ${(({ name }) => name === ThemeEnum.black ? 'right: 0' : 'right: 0')};
   pointer-events: ${(({ name, theme }) => name === theme.name ? 'none' : 'all')};
+
   transform-origin: -25%;
   
+  div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
   & .sun-svg {
     &__sun{
       fill: ${(({ name, theme }) => name === theme.name ? theme.constants.white : theme.constants.black)};
@@ -33,6 +40,7 @@ export const ThemeButtonStyle = styled.button<ThemeButtonType>`
   }
 
    & .moon-icon {
+
     &__fill {
       fill: ${(({ name, theme }) => name === theme.name ? theme.constants.white : theme.constants.black)};
       transition: .3s;
@@ -58,18 +66,18 @@ export const ThemeButtonStyle = styled.button<ThemeButtonType>`
 
   @keyframes fly-to-left {
     from {
-    transform: rotate(0deg);
+    transform: rotateY(0deg);
     }
     to {
-      transform: rotate(-180deg);
+      transform: rotateY(-180deg);
     }
   }
   @keyframes fly-to-right {
     from {
-    transform: rotate(-180deg);
+    transform: rotateY(-180deg);
     }
     to {
-      transform: rotate(-360deg);
+      transform: rotateY(-360deg);
     }
   }
 

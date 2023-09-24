@@ -7,10 +7,18 @@ import { IThemes } from "../../../themes/themes";
 import { LanguageSelector } from "../../smart/lang-selector/langSelector";
 import { Text } from "../../smart/text/text";
 import { ThemeButton } from "../themeButton/themeButton";
+import { Nav } from "../nav/nav";
+import { Burger } from "../burger/burger";
+
 import {
     HeaderStyle,
     HeaderWrap,
-    ThemeWrap
+    LogoName,
+    AuthorName,
+    SettingsSection,
+    ThemeWrap,
+    HeaderTop,
+    NavWrap
 } from "./header.styled";
 
 type HeaderProps = {
@@ -36,20 +44,31 @@ export const Header: React.FC<HeaderProps> = (props) => {
     return (
         <HeaderStyle>
             <HeaderWrap>
-                <h2>
-                    <Text tid='AUTHOR' />
-                </h2>
-                <ThemeWrap>
-                    <ThemeButton
-                        name={ThemeEnum.light}
-                        changeTheme={changeTheme}
-                        isAnimationStart={animationStart} />
-                    <ThemeButton
-                        name={ThemeEnum.black}
-                        changeTheme={changeTheme}
-                        isAnimationStart={animationStart} />
-                </ThemeWrap>
-                <LanguageSelector />
+                <HeaderTop>
+                    <LogoName>
+                        <AuthorName>
+                            <span>CV</span>
+                            <Text tid='AUTHOR' />
+                        </AuthorName>
+                    </LogoName>
+                    <SettingsSection>
+                        <LanguageSelector />
+                        <ThemeWrap>
+                            <ThemeButton
+                                name={ThemeEnum.light}
+                                changeTheme={changeTheme}
+                                isAnimationStart={animationStart} />
+                            <ThemeButton
+                                name={ThemeEnum.black}
+                                changeTheme={changeTheme}
+                                isAnimationStart={animationStart} />
+                        </ThemeWrap>
+                    </SettingsSection>
+                </HeaderTop>
+                <NavWrap className='header__nav-wrap'>
+                    <Nav />
+                    <Burger />
+                </NavWrap>
             </HeaderWrap>
         </HeaderStyle>
     );

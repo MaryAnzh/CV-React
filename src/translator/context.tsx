@@ -1,8 +1,7 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 import { en } from "./dictionaries/en";
 import { ru } from "./dictionaries/ru";
 import { IDictionary } from "./dictionaries/interface";
-import { Dict } from "styled-components/dist/types";
 
 export const dictionaryList = { en, ru };
 
