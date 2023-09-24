@@ -19,6 +19,7 @@ export class Store {
   // startNewGame
   // startRound
   // finishRound
+  //finishGame
 
   //utils
   //checkResult
