@@ -24,7 +24,9 @@ export interface IThemeColors {
     dot: string,
     dotAlfa: number,
     shadow: string,
-    footer: string
+    footer: string,
+    gameChecker: string,
+    gameChecker_hover: string
 }
 
 export interface ITheme {

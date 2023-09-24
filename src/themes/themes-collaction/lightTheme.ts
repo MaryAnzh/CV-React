@@ -13,7 +13,9 @@ const colors: IThemeColors = {
     dot: 'pink',
     dotAlfa: 25,
     shadow: '3px 3px 6px rgba(0, 0, 0, 0.3)',
-    footer: '#eee'
+    footer: '#eee',
+    gameChecker: palette.green_light_1,
+    gameChecker_hover: palette.green_base
 }
 
 export const lightTheme: ITheme = {

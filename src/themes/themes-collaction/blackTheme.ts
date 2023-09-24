@@ -14,6 +14,8 @@ const colors: IThemeColors = {
     dotAlfa: 50,
     shadow: '3px 3px 6px rgba(250, 250, 250, 0.3)',
     footer: 'gray',
+    gameChecker: palette.lightGray,
+    gameChecker_hover: 'gray'
 }
 
 export const blackTheme: ITheme = {

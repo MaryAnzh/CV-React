@@ -26,4 +26,6 @@ export interface IDictionary {
     SKILLS_ADDITION: string,
     SKILLS_COMMON: string,
     EDUCATION_INFO: string,
+    GAME_2024: string,
+    GAME_LINK: string,
 }
