@@ -11,21 +11,26 @@
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
-    "gh": "^2.8.9",
+    "form-data": "^2.5.4",
+    "handlebars": "^4.7.8",
+    "lodash": "^4.17.21",
     "mobx": "^6.9.0",
     "mobx-react-lite": "^3.4.3",
+    "moment": "^2.29.4",
+    "qs": "^6.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-is": "^19.2.3",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "5.0.0",
     "styled-components": "^5.3.9",
     "tsconfig-paths": "^4.2.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "craco start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "compile": "npx tsc -v && npx tsc -b",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
@@ -52,14 +57,15 @@
     ]
   },
   "devDependencies": {
-    "@craco/craco": "^7.1.0",
+    "@craco/craco": "7.0.0",
     "@eslint/js": "^9.39.2",
+    "@svgr/webpack": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.5.0",
-    "husky": "^9.1.7",
+    "husky": "^8.0.0",
     "jiti": "^2.6.1",
     "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
@@ -76,5 +82,10 @@
     "*.{json,css,scss,md}": [
       "prettier --write"
     ]
+  },
+  "overrides": {
+    "@svgr/webpack": "^8.1.0",
+    "svgo": "^2.8.0",
+    "postcss": "^8.4.31"
   }
 }

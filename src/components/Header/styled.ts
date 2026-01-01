@@ -7,10 +7,5 @@ export const HeaderWrap = styled.header`
   display: grid;
   justify-content: center;
   align-self: center;
-
-  button {
-    background: var(--base);
-    color: var(--base-contrast);
-    cursor: pointer;
-  }
+  background-color: var(--secondary-300);
 `;

@@ -1,4 +1,10 @@
-import type { ICON_PICKER, TEXT_VIEW_NAME, DARK, LIGHT } from "~constants";
+import type {
+  ICON_PICKER,
+  TEXT_VIEW_NAME,
+  DARK,
+  LIGHT,
+  SIZE_CHART,
+} from "~constants";
 
 export type ThemeType = typeof DARK | typeof LIGHT;
 
@@ -12,3 +18,5 @@ export type CardType = {
 export type TextViewNameType = keyof typeof TEXT_VIEW_NAME;
 
 export type IconNameType = keyof typeof ICON_PICKER;
+
+export type SizeChartType = keyof typeof SIZE_CHART;
