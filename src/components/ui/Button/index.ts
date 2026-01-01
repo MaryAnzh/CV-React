@@ -1,2 +1,2 @@
-export { ButtonDefault } from "./styled";
-export { Button } from "./Button";
+export { ButtonDefault } from './styled';
+export { Button } from './Button';

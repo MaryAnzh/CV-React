@@ -1,19 +1,19 @@
-import { action, makeObservable, observable } from "mobx";
+import { action, makeObservable, observable } from 'mobx';
 
 class Store {
-  base: string = "base";
+	base = 'base';
 
-  constructor() {
-    makeObservable(this, {
-      base: observable,
-      setFun: action,
-    });
-  }
+	constructor() {
+		makeObservable(this, {
+			base: observable,
+			setFun: action,
+		});
+	}
 
-  //setters
-  setFun = (value: string) => {
-    this.base = value;
-  };
+	//setters
+	setFun = (value: string) => {
+		this.base = value;
+	};
 }
 
 export const store = new Store();

@@ -1,5 +1,5 @@
-import * as S from "./styled";
+import * as S from './styled';
 
 export const MainPage = () => {
-  return <S.MainWrap></S.MainWrap>;
+	return <S.MainWrap></S.MainWrap>;
 };

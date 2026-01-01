@@ -1,5 +1,5 @@
-import * as S from "./styled";
+import * as S from './styled';
 
 export const Button = () => {
-  return <S.ButtonWrap></S.ButtonWrap>;
+	return <S.ButtonWrap></S.ButtonWrap>;
 };

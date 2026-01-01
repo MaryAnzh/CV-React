@@ -1,6 +1,6 @@
-import type { ImgHTMLAttributes } from "react";
+import type { ImgHTMLAttributes } from 'react';
 
 export type ImageProps = Pick<
-  ImgHTMLAttributes<HTMLImageElement>,
-  "src" | "alt"
+	ImgHTMLAttributes<HTMLImageElement>,
+	'src' | 'alt'
 >;
