@@ -1,47 +1,32 @@
-import React, { useState } from 'react';
-import { ThemeContext } from "styled-components";
-import { LanguageProvider } from './translator/provider';
-import { IThemes, theme } from './themes/themes';
-import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import { useState } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { observer } from "mobx-react-lite";
 
-import { Header } from './components/common/header/header';
-import { Pages } from './pages/pages-const';
-import { Footer } from './components/common/footer/footer';
+import { Footer, Header } from "~components";
+import { LIGHT, MAIN_ROUTE } from "~constants";
+import { MainPage } from "~pages";
+import type { ThemeType } from "~types";
 
-import {
-  AppStyle,
-  MainStyle
-} from './AppStyle';
+import * as S from "./AppStyled";
 
+const App = observer(() => {
+  const [theme, setTheme] = useState<ThemeType>(LIGHT);
 
-
-export const App = () => {
-  const [selectedTheme, setSelectedTheme] = useState(theme.light);
-
-  const changeTheme = (name: keyof IThemes) => {
-    const newTheme = theme[name];
-    setSelectedTheme(() => newTheme);
-  }
+  const handleChangeTheme = (theme: ThemeType) => {
+    setTheme(theme);
+  };
 
   return (
-    <LanguageProvider>
-      <ThemeContext.Provider value={selectedTheme}>
-        <BrowserRouter>
-          <AppStyle>
-            <Header changeTheme={changeTheme} />
-            <MainStyle>
-              <Routes>
-                <Route path={Pages.home.path} element={<Pages.home.link />} />
-                <Route path={Pages.info.path} element={<Pages.info.link />} />
-                <Route path={Pages.animation.path} element={<Pages.animation.link />} />
-                <Route path={Pages.games.path} element={<Pages.games.link />} />
-                <Route path={Pages.blog.path} element={<Pages.blog.link />} />
-              </Routes>
-            </MainStyle>
-            <Footer />
-          </AppStyle>
-        </BrowserRouter>
-      </ThemeContext.Provider>
-    </LanguageProvider>
+    <BrowserRouter>
+      <S.APPWrap data-theme={theme}>
+        <Header onChangeTheme={handleChangeTheme} />
+        <Routes>
+          <Route path={MAIN_ROUTE} element={<MainPage />} />
+        </Routes>
+        <Footer />
+      </S.APPWrap>
+    </BrowserRouter>
   );
-}
+});
+
+export { App };
