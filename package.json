@@ -2,6 +2,7 @@
 	"name": "cv",
 	"version": "1.0.0",
 	"private": true,
+	"homepage": "https://maryanzh.github.io/CV-React/",
 	"dependencies": {
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
@@ -38,7 +39,9 @@
 		"format": "prettier src --write",
 		"ts-coverage": "typescript-coverage-report --threshold=95",
 		"prepare": "husky install",
-		"lint-staged": "lint-staged"
+		"lint-staged": "lint-staged",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -70,6 +73,7 @@
 		"eslint-plugin-import": "^2.32.0",
 		"eslint-plugin-prettier": "^5.5.4",
 		"eslint-plugin-react": "^7.37.5",
+		"gh-pages": "^6.3.0",
 		"globals": "^16.5.0",
 		"husky": "^8.0.0",
 		"jiti": "^2.6.1",
