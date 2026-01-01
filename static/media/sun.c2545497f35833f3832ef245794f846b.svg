@@ -1,0 +1,18 @@
+var _path, _path2;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+const SvgSun = props => /*#__PURE__*/React.createElement("svg", _extends({
+  className: "sun_svg__sun-svg",
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 30 30",
+  style: {
+    enableBackground: "new 0 0 30 30"
+  },
+  xmlSpace: "preserve"
+}, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  className: "sun_svg__sun-svg__sun",
+  d: "m30 15-3.1 1.9 2.4 2.7-3.6.8 1.4 3.4-3.6-.3.3 3.6-3.4-1.4-.8 3.6-2.7-2.4L15 30l-1.9-3.1-2.7 2.4-.8-3.6-3.4 1.4.3-3.6-3.6.3 1.4-3.4-3.6-.8 2.4-2.7L0 15l3.1-1.9-2.4-2.7 3.6-.8-1.4-3.4 3.6.3-.3-3.6 3.4 1.4.8-3.6 2.7 2.4L15 0l1.9 3.1L19.6.7l.8 3.6 3.4-1.4-.3 3.6 3.6-.3-1.4 3.4 3.6.8-2.4 2.7z"
+})), _path2 || (_path2 = /*#__PURE__*/React.createElement("path", {
+  d: "M15 4.3c5.9 0 10.8 4.8 10.8 10.8S20.9 25.8 15 25.8 4.3 20.9 4.3 15 9.1 4.3 15 4.3m0-.5C8.8 3.8 3.8 8.8 3.8 15s5 11.3 11.3 11.3 11.3-5 11.3-11.3S21.2 3.8 15 3.8z"
+})));
+export default SvgSun;

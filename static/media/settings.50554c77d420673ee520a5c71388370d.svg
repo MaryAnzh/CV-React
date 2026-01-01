@@ -1,0 +1,11 @@
+var _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+const SvgSettings = props => /*#__PURE__*/React.createElement("svg", _extends({
+  xmlns: "http://www.w3.org/2000/svg",
+  viewBox: "0 0 50 50"
+}, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  fill: "currentColor",
+  d: "M50 29.7v-9.4h-5.6l-2.2-5.6 4.1-4.1L39.7 4l-4.1 4.1-5.9-2.5V0h-9.4v5.6l-5.6 2.5L10.6 4 4 10.6l4.1 4.1-2.5 5.6H0v9.4h5.6l2.2 5.6-4.1 4.1 6.6 6.6 4.1-4.1 5.6 2.2V50h9.4v-5.6l5.6-2.2 4.1 4.1 6.6-6.6-4.1-4.1 2.2-5.6H50v-.3zm-25 7.8c-6.9 0-12.5-5.6-12.5-12.5S18.1 12.5 25 12.5 37.5 18.1 37.5 25 31.9 37.5 25 37.5z"
+})));
+export default SvgSettings;
