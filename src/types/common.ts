@@ -1,18 +1,18 @@
 import type {
-  ICON_PICKER,
-  TEXT_VIEW_NAME,
-  DARK,
-  LIGHT,
-  SIZE_CHART,
-} from "~constants";
+	ICON_PICKER,
+	TEXT_VIEW_NAME,
+	DARK,
+	LIGHT,
+	SIZE_CHART,
+} from '~constants';
 
 export type ThemeType = typeof DARK | typeof LIGHT;
 
 export type IsActiveType = { isActive: boolean };
 
 export type CardType = {
-  id: number;
-  url: string;
+	id: number;
+	url: string;
 };
 
 export type TextViewNameType = keyof typeof TEXT_VIEW_NAME;
