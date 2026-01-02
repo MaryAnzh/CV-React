@@ -10,23 +10,23 @@ import type { ThemeType } from '~types';
 import * as S from './AppStyled';
 
 const App = observer(() => {
-	const [theme, setTheme] = useState<ThemeType>(LIGHT);
+  const [theme, setTheme] = useState<ThemeType>(LIGHT);
 
-	const handleChangeTheme = (theme: ThemeType) => {
-		setTheme(theme);
-	};
+  const handleChangeTheme = (theme: ThemeType) => {
+    setTheme(theme);
+  };
 
-	return (
-		<BrowserRouter>
-			<S.APPWrap data-theme={theme}>
-				<Header onChangeTheme={handleChangeTheme} />
-				<Routes>
-					<Route path={MAIN_ROUTE} element={<MainPage />} />
-				</Routes>
-				<Footer />
-			</S.APPWrap>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter basename="/CV-React">
+      <S.APPWrap data-theme={theme}>
+        <Header theme={theme} onChangeTheme={handleChangeTheme} />
+        <Routes>
+          <Route path={MAIN_ROUTE} element={<MainPage />} />
+        </Routes>
+        <Footer />
+      </S.APPWrap>
+    </BrowserRouter>
+  );
 });
 
 export { App };

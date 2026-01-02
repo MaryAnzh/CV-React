@@ -1,5 +1,6 @@
 import type { ThemeType } from '~types';
 
 export type HeaderProps = {
-	onChangeTheme: (theme: ThemeType) => void;
+  onChangeTheme: (theme: ThemeType) => void;
+  theme: ThemeType;
 };
