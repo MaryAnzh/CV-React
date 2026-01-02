@@ -4,7 +4,7 @@ import type {
   DARK,
   LIGHT,
   SIZE_CHART,
-} from '~constants';
+} from "~constants";
 
 export type ThemeType = typeof DARK | typeof LIGHT;
 

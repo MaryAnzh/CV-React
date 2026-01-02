@@ -1,5 +1,5 @@
-import type { ReactNode } from 'react';
-import type { TextViewNameType } from '~types';
+import type { ReactNode } from "react";
+import type { TextViewNameType } from "~types";
 
 export type TypographyViewStyleType = {
   size: string;
@@ -10,7 +10,7 @@ export type TypographyViewStyleType = {
 
 export type TypographyStyleType = {
   textView?: TextViewNameType;
-  asTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span' | 'li';
+  asTag?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "li";
   callback?: () => void;
 };
 

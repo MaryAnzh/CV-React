@@ -1,5 +1,5 @@
-import * as S from './styled';
-import type { ImageProps } from './types';
+import * as S from "./styled";
+import type { ImageProps } from "./types";
 
 export const Image = ({ src, alt, ...rest }: ImageProps) => {
   return (

@@ -1,6 +1,6 @@
-import type { HTMLAttributes } from 'react';
+import type { HTMLAttributes } from "react";
 
-import type { IconNameType, SizeChartType } from '~types';
+import type { IconNameType, SizeChartType } from "~types";
 
 export type IconProps = {
   iconName: IconNameType;
@@ -10,4 +10,4 @@ export type IconProps = {
   width?: number;
 } & HTMLAttributes<HTMLOrSVGElement>;
 
-export type IconType = Omit<IconProps, 'iconName' | 'iconSize'>;
+export type IconType = Omit<IconProps, "iconName" | "iconSize">;

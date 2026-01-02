@@ -1,13 +1,13 @@
-import { observer } from 'mobx-react-lite';
+import { observer } from "mobx-react-lite";
 
-import { Button } from 'components/ui';
-import type { HeaderProps } from './types';
+import { Button } from "components/ui";
+import type { HeaderProps } from "./types";
 
-import * as S from './styled';
+import * as S from "./styled";
 
-import type { ThemeType } from '~types';
+import type { ThemeType } from "~types";
 
-import { DARK, LIGHT } from '~constants';
+import { DARK, LIGHT } from "~constants";
 
 export const Header = observer(({ onChangeTheme, theme }: HeaderProps) => {
   const handleChange = (theme: ThemeType) => () => {
@@ -22,7 +22,7 @@ export const Header = observer(({ onChangeTheme, theme }: HeaderProps) => {
           <Button
             key={themeName}
             buttonColorVariant="ghostDark"
-            buttonLeftIconName={themeName === DARK ? 'moon' : 'sun'}
+            buttonLeftIconName={themeName === DARK ? "moon" : "sun"}
             onClick={() => onChangeTheme(themeName)}
             isRoundButton
             disabled={theme == themeName}

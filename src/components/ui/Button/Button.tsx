@@ -1,9 +1,9 @@
-import { Icon, Typography } from '~components';
+import { Icon, Typography } from "~components";
 
-import { BUTTON_ICON_SIZE, BUTTON_TEXT_SIZE } from './constants';
-import type { ButtonProps } from './types';
+import { BUTTON_ICON_SIZE, BUTTON_TEXT_SIZE } from "./constants";
+import type { ButtonProps } from "./types";
 
-import * as S from './styled';
+import * as S from "./styled";
 
 export function Button({
   buttonText,
@@ -13,10 +13,10 @@ export function Button({
   buttonRightIconName,
   buttonRightIconRotate,
   buttonNodeElement,
-  buttonSize = 'S',
+  buttonSize = "S",
   ...rest
 }: ButtonProps) {
-  const buttonIconSize = BUTTON_ICON_SIZE[buttonSize ?? 'S'];
+  const buttonIconSize = BUTTON_ICON_SIZE[buttonSize ?? "S"];
 
   return (
     <S.ButtonWrap buttonSize={buttonSize} isIconButton={!buttonText} {...rest}>

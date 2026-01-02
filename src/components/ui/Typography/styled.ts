@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import { TEXT_VIEW_STYLES } from './constants';
-import type { TypographyStyleType, TypographyViewStyleType } from './types';
+import styled, { css } from "styled-components";
+import { TEXT_VIEW_STYLES } from "./constants";
+import type { TypographyStyleType, TypographyViewStyleType } from "./types";
 
 export const getTextSettings = ({
   size,
@@ -20,7 +20,7 @@ export const TypographyStyle = styled.p<TypographyStyleType>`
   font-style: normal;
 
   ${({ textView }) => {
-    const view = textView ?? 'bodyMMedium';
+    const view = textView ?? "bodyMMedium";
 
     const { size, lineHeight, letterSpacing, weight } = TEXT_VIEW_STYLES[view];
 

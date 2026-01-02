@@ -1,6 +1,6 @@
-import styled, { css } from 'styled-components';
-import type { ButtonStyleProps } from './types';
-import { BUTTON_COLOR_VARIANTS, BUTTON_SIZES } from './constants';
+import styled, { css } from "styled-components";
+import type { ButtonStyleProps } from "./types";
+import { BUTTON_COLOR_VARIANTS, BUTTON_SIZES } from "./constants";
 
 export const ButtonDefault = styled.button`
   box-sizing: border-box;
@@ -31,9 +31,9 @@ export const ButtonDefault = styled.button`
 
 export const ButtonWrap = styled(ButtonDefault)<ButtonStyleProps>`
   ${({
-    buttonColorVariant = 'dark',
-    buttonWidth = 'fit-content',
-    buttonSize = 'S',
+    buttonColorVariant = "dark",
+    buttonWidth = "fit-content",
+    buttonSize = "S",
     isFistLaterLowercase,
     isIconButton,
     isMultiline,
@@ -61,22 +61,22 @@ export const ButtonWrap = styled(ButtonDefault)<ButtonStyleProps>`
     } = BUTTON_COLOR_VARIANTS[buttonColorVariant];
 
     const isGhostButton =
-      buttonColorVariant === 'ghostLight' || buttonColorVariant === 'ghostDark';
+      buttonColorVariant === "ghostLight" || buttonColorVariant === "ghostDark";
 
     return css`
       width: ${buttonWidth};
-      height: ${isIconButton ? 'fit-content' : height};
-      border-radius: ${isRoundButton ? '50%' : borderRadius};
+      height: ${isIconButton ? "fit-content" : height};
+      border-radius: ${isRoundButton ? "50%" : borderRadius};
       padding: ${isIconButton
-        ? 'opx'
-        : `${paddingVertical} ${isGhostButton ? '0' : paddingHorizontal}`};
+        ? "opx"
+        : `${paddingVertical} ${isGhostButton ? "0" : paddingHorizontal}`};
       gap: ${gap};
       background: ${bg};
       color: ${color};
-      white-space: ${isMultiline ? 'normal' : 'nowrap'};
+      white-space: ${isMultiline ? "normal" : "nowrap"};
 
       & > span::first-letter {
-        text-transform: ${isFistLaterLowercase ? 'lowercase' : 'uppercase'};
+        text-transform: ${isFistLaterLowercase ? "lowercase" : "uppercase"};
       }
 
       & > svg {
@@ -92,12 +92,12 @@ export const ButtonWrap = styled(ButtonDefault)<ButtonStyleProps>`
       &:focus {
         background: ${bgFocus};
         color: ${colorFocus};
-        ${buttonWidth === 'fit-content' || buttonWidth === 'auto'
+        ${buttonWidth === "fit-content" || buttonWidth === "auto"
           ? `outline`
-          : 'border'}: 2px solid ${borderFocus};
+          : "border"}: 2px solid ${borderFocus};
 
-        ${(buttonWidth === 'fit-content' || buttonWidth === 'auto') &&
-        'outline-offset: -2px;'}
+        ${(buttonWidth === "fit-content" || buttonWidth === "auto") &&
+        "outline-offset: -2px;"}
       }
 
       &:active {

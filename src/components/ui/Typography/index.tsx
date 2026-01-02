@@ -1,6 +1,6 @@
-import type { TypographyProps } from './types';
+import type { TypographyProps } from "./types";
 
-import * as S from './styled';
+import * as S from "./styled";
 
 export const Typography = ({
   children,
@@ -9,7 +9,7 @@ export const Typography = ({
   ...rest
 }: TypographyProps) => {
   return (
-    <S.TypographyStyle as={asTag ?? 'span'} onClick={callback} {...rest}>
+    <S.TypographyStyle as={asTag ?? "span"} onClick={callback} {...rest}>
       {children}
     </S.TypographyStyle>
   );

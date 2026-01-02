@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import type { IconType } from './models';
+import styled, { css } from "styled-components";
+import type { IconType } from "./models";
 
 export const IconStyle = styled.svg<IconType>`
   max-width: 100%;

@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { observer } from 'mobx-react-lite';
+import { useState } from "react";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { observer } from "mobx-react-lite";
 
-import { Footer, Header } from '~components';
-import { LIGHT, MAIN_ROUTE } from '~constants';
-import { MainPage } from '~pages';
-import type { ThemeType } from '~types';
+import { Footer, Header } from "~components";
+import { LIGHT, MAIN_ROUTE } from "~constants";
+import { MainPage } from "~pages";
+import type { ThemeType } from "~types";
 
-import * as S from './AppStyled';
+import * as S from "./AppStyled";
 
 const App = observer(() => {
   const [theme, setTheme] = useState<ThemeType>(LIGHT);

@@ -1,4 +1,4 @@
-import { M, S, X, XS } from '~constants';
+import { M, S, X, XS } from "~constants";
 
 export const ICON_SIZES = {
   [M]: 24,
