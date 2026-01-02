@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/CV-React/static/css/main.95100349.css",
-    "main.js": "/CV-React/static/js/main.2c0b6710.js",
+    "main.css": "/CV-React/static/css/main.e428d49c.css",
+    "main.js": "/CV-React/static/js/main.b20a4d14.js",
     "static/js/453.f2dee870.chunk.js": "/CV-React/static/js/453.f2dee870.chunk.js",
-    "static/media/moon.svg?react": "/CV-React/static/media/moon.4c9548c189855f74c1d5c03a290380de.svg",
-    "static/media/sun.svg?react": "/CV-React/static/media/sun.c2545497f35833f3832ef245794f846b.svg",
-    "static/media/settings.svg?react": "/CV-React/static/media/settings.50554c77d420673ee520a5c71388370d.svg",
+    "static/media/moon.svg": "/CV-React/static/media/moon.1ab8e04eb1c3f38e94838968fb87d353.svg",
+    "static/media/sun.svg": "/CV-React/static/media/sun.056186867fc60167551e13fa6d0c0eb8.svg",
+    "static/media/settings.svg": "/CV-React/static/media/settings.50554c77d420673ee520a5c71388370d.svg",
     "index.html": "/CV-React/index.html",
-    "main.95100349.css.map": "/CV-React/static/css/main.95100349.css.map",
-    "main.2c0b6710.js.map": "/CV-React/static/js/main.2c0b6710.js.map",
+    "main.e428d49c.css.map": "/CV-React/static/css/main.e428d49c.css.map",
+    "main.b20a4d14.js.map": "/CV-React/static/js/main.b20a4d14.js.map",
     "453.f2dee870.chunk.js.map": "/CV-React/static/js/453.f2dee870.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95100349.css",
-    "static/js/main.2c0b6710.js"
+    "static/css/main.e428d49c.css",
+    "static/js/main.b20a4d14.js"
   ]
 }
