@@ -35,7 +35,7 @@
 		"test": "craco test",
 		"eject": "react-scripts eject",
 		"compile": "npx tsc -v && npx tsc -b",
-		"lint": "eslint --fix --ext .js,.jsx,.ts,.tsx",
+		"lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
 		"lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx",
 		"ts-coverage": "typescript-coverage-report --threshold=95",
 		"prepare": "husky install",
