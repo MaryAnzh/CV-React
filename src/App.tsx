@@ -1,14 +1,12 @@
-import { useState } from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
-
+import { BrowserRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+
+import { DARK, LIGHT } from '~constants';
+import { AppLayout } from '~pages';
 import { type RootState } from '~store';
 
-import { DARK, LIGHT, MAIN_ROUTE } from '~constants';
-import { MainPage } from '~pages';
 
 import * as S from './AppStyled';
-import { AppLayout } from 'layouts/AppLayout';
 
 export const App = () => {
 	const theme = useSelector((state: RootState) => state.theme);

@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Navigate, Outlet, Route, Routes, useNavigate } from 'react-router-dom';
+import { useMemo } from 'react';
+import { Navigate, Outlet, Route, Routes } from 'react-router-dom';
 
 import * as C from '~constants';
 import type { AppRoutesType } from '~types';
+
 import { ROUTES_MAP } from './constants';
 
 export function AppLayout() {

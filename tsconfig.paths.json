@@ -10,7 +10,6 @@
       "~themes": ["./themes"],
       "~components": ["./components"],
       "~pages": ["./pages"],
-      "~layouts": ["./layouts"],
       "~styles": ["./styles"],
       "~utils": ["./utils"]
     }

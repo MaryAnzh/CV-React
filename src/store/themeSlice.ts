@@ -1,5 +1,5 @@
 import { createSlice, type PayloadAction, type SliceCaseReducers, type SliceSelectors } from '@reduxjs/toolkit';
-import { DARK, LIGHT, THEME } from '~constants';
+import { DARK, THEME } from '~constants';
 import type { ThemeType } from '~types';
 
 const initialState: ThemeType = DARK;
