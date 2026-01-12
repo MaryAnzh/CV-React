@@ -1,11 +1,12 @@
 export const DICTIONARY = {
 	AUTHOR: 'Vashchayeva Maryia',
 	DARK: 'dark',
+	GALLERY: 'gallery',
 	GO_HOME: 'Go home',
 	LIGHT: 'light',
 	MAIN: 'main',
 	THEME: 'theme',
-	WORKSPACE: 'Workspace'
+	WORKSPACE: 'Workspace',
 } as const;
 
-export const { GO_HOME, MAIN, LIGHT, DARK, AUTHOR, THEME, WORKSPACE } = DICTIONARY;
+export const { GALLERY, GO_HOME, MAIN, LIGHT, DARK, AUTHOR, THEME, WORKSPACE } = DICTIONARY;
