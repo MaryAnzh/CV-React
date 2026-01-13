@@ -3,6 +3,7 @@ function _extends() { return _extends = Object.assign ? Object.assign.bind() : f
 import * as React from "react";
 const SvgSun = props => /*#__PURE__*/React.createElement("svg", _extends({
   stroke: "currentColor",
+  fill: "none",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 30 30"
 }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {

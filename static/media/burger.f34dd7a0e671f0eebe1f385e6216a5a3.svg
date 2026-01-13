@@ -1,0 +1,12 @@
+var _path;
+function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
+import * as React from "react";
+const SvgBurger = props => /*#__PURE__*/React.createElement("svg", _extends({
+  width: 24,
+  height: 24,
+  fill: "currentColor",
+  xmlns: "http://www.w3.org/2000/svg"
+}, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
+  d: "M0 5.333c0 .734.6 1.334 1.333 1.334h21.334c.733 0 1.333-.6 1.333-1.334C24 4.6 23.4 4 22.667 4H1.333C.6 4 0 4.6 0 5.333ZM1.333 20h21.334C23.4 20 24 19.4 24 18.667c0-.734-.6-1.334-1.333-1.334H1.333c-.733 0-1.333.6-1.333 1.334C0 19.4.6 20 1.333 20Zm21.334-6.667H1.333C.6 13.333 0 12.733 0 12s.6-1.333 1.333-1.333h21.334c.733 0 1.333.6 1.333 1.333s-.6 1.333-1.333 1.333Z"
+})));
+export default SvgBurger;
