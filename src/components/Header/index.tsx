@@ -64,11 +64,12 @@ export const Header = ({ isGamePage, isMyMainPage }: HeaderProps) => {
 	return (
 		<S.HeaderWrap isGamePage={isGamePage} isMyMainPage={isMyMainPage}>
 			<S.LogoWrapper isMyMainPage={isMyMainPage} />
-			<S.HeaderPageName
-				asTag='h2'
-				textView='headingMRegular'>
-				{pageName}
-			</S.HeaderPageName>
+			{(isGamePage || isMyMainPage) &&
+				<S.HeaderPageName
+					asTag='h2'
+					textView='headingMRegular'>
+					{pageName}
+				</S.HeaderPageName>}
 			{buttons.map(({ Button, key, ...props }) => (
 				<Button key={key} {...props as ButtonProps} />
 			))}
