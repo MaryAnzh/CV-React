@@ -1,7 +1,8 @@
 import { ICON_PICKER, M } from '~constants';
 
-import type { IconProps } from './models';
 import { ICON_SIZES } from './constants';
+import type { IconProps } from './types';
+
 import * as S from './styled';
 
 export function Icon({ iconName, iconSize, size, ...props }: IconProps) {

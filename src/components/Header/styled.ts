@@ -1,18 +1,29 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
-export const HeaderWrap = styled.header`
+import { Logo } from 'components/ui';
+
+import type { HeaderProps } from './types';
+
+export const HeaderWrap = styled.header<HeaderProps>`
 	width: 100%;
 	padding: var(--p-4);
-	gap: var(--p-2);
+	gap: var(--p-4);
 	display: grid;
-	background-color: var(--secondary-300);
-	grid-template-columns: auto max-content min-content;
+	grid-template-columns: ${({ isMyMainPage }) => isMyMainPage ? 'auto repeat(3, min-content)' : 'max-content auto repeat(2, min-content)'};
+	align-items: center;
+	
+	${({ isGamePage }) => isGamePage && css`
+		& > h2 {
+			justify-self: center;
+		}
+	`}
 `;
 
-export const HeaderLogoWrap = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: var(--p-2);
+export const LogoWrapper = styled(Logo) <Pick<HeaderProps, 'isMyMainPage'>>`
+	${({ isMyMainPage }) => css`
+		display: ${isMyMainPage ? 'none' : 'flex'};
+	`}
 `;
 
 export const HeaderThemeWrap = styled.div`

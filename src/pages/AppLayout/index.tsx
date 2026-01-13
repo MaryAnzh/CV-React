@@ -26,7 +26,7 @@ export function AppLayout() {
 				path="/"
 				element={
 					<Navigate
-						to={C.ROUTE_ACCOUNT_WORKSPACE}
+						to={C.ROUTE_ACCOUNT_ABOUT_ME}
 						replace
 					/>
 				}

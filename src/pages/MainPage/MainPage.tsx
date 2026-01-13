@@ -7,8 +7,9 @@ import * as S from './styled';
 export const MainPage = () => {
 	return (
 		<S.MainPageWrap>
+			<S.SidebarLogo />
 			<S.SidebarWrapper />
-			<Header />
+			<Header isMyMainPage />
 			<Outlet />
 			<Footer />
 		</S.MainPageWrap>

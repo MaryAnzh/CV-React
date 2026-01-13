@@ -20,12 +20,12 @@ export const ROUTES_MAP = [
         ),
         childrenRoutes: [
             {
-                name: 'Workspace',
-                path: C.ROUTE_ACCOUNT_WORKSPACE,
-                element: <P.Workspace />,
+                name: C.ABOUT_ME,
+                path: C.ROUTE_ACCOUNT_ABOUT_ME,
+                element: <P.AboutMePage />,
             },
             {
-                name: 'Projects',
+                name: C.GALLERY,
                 path: C.ROUTE_ACCOUNT_GALLERY,
                 element: (
                     <P.Gallery />

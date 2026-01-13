@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import { TEXT_VIEW_STYLES } from './constants';
 import type { TypographyStyleType, TypographyViewStyleType } from './types';
 
@@ -18,14 +19,18 @@ export const TypographyStyle = styled.p<TypographyStyleType>`
 	margin: 0;
 	padding: 0;
 	font-style: normal;
+	color: var(--secondary);
 
-	${({ textView }) => {
+	${({ textView, isFirstLetterLowerCase }) => {
 		const view = textView ?? 'bodyMMedium';
 
 		const { size, lineHeight, letterSpacing, weight } = TEXT_VIEW_STYLES[view];
 
 		return css`
 			${getTextSettings({ size, lineHeight, letterSpacing, weight })};
+			&::first-letter {
+				text-transform: ${isFirstLetterLowerCase ? 'none' : 'uppercase'};
+			}
 		`;
 	}}
 `;

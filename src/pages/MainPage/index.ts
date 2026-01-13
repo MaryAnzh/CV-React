@@ -1,3 +1,3 @@
 export { MainPage } from './MainPage';
-export { Workspace } from './Workspace';
+export { AboutMePage } from './AboutMe';
 export { Gallery } from './Gallery';

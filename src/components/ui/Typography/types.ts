@@ -10,10 +10,11 @@ export type TypographyViewStyleType = {
 
 export type TypographyStyleType = {
 	textView?: TextViewNameType;
-	asTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span' | 'li';
-	callback?: () => void;
+	isFirstLetterLowerCase?: boolean;
 };
 
 export type TypographyProps = TypographyStyleType & {
+	asTag?: 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span' | 'li';
+	callback?: () => void;
 	children: ReactNode;
 };

@@ -1,29 +1,41 @@
 :root {
-	--base: #fff;
-	--base-contrast: #000;
+	--main: #fff;
+	--secondary: #000;
 
-	--main-100: #4e4e4e;
-	--main-200: #333;
-	--main-300: #272525;
+	--main-100: #f9f9f9;
+	--secondary-100: #333;
 
-	--secondary-100: #f9f9f9;
-	--secondary-200: #f0f0f0;
-	--secondary-300: #e2e2e2;
-	--secondary-400: #aaaaaa;
-	--secondary-500: #777777;
-	--secondary-600: #5a5a5a;
+	--main-200: #f6f6f6;
+	--secondary-200: #191919;
 
-	--accent-100: #fffd00;
-	--accent-200: #fffe73;
-	--accent-300: #fffe73;
-	--accent-400: #bfbe30;
+	--main-300: #e2e2e2;
+	--secondary-300: #242424;
 
-	--grey-100: #f9f9f9;
-	--grey-200: #f0f0f0;
-	--grey-300: #e2e2e2;
-	--grey-400: #aaaaaa;
-	--grey-500: #777777;
-	--grey-600: #5a5a5a;
+	--main-400: #cfcfcf;
+	--secondary-400: #282828;
+
+	--main-500: #777777;
+	--secondary-500: #2c2c2c;
+
+	--main-600: #5a5a5a;
+	--secondary-400: #464444;
+
+	--accent-200: #eefae7;
+	--accent-300: #eefad1;
+	--accent-400: #eefabc;
+	--accent-500: #eefaa5;
+	--accent-600: #eefa7a;
+	--accent-700: #dce687;
+	--accent-800: #c3d701;
+
+	--gray-100: #f9f9f9;
+	--gray-200: #f6f6f6;
+	--gray-300: #f0f0f0;
+	--gray-400: #e2e2e2;
+	--gray-500: #cfcfcf;
+	--gray-600: #aaaaaa;
+	--gray-700: #777777;
+	--gray-800: #5a5a5a;
 
 	--button-box-shadow: 0px 1px 3.9px 0px rgba(113, 113, 113, 0.25);
 
@@ -59,31 +71,43 @@
 }
 
 [data-theme='dark'] {
-	--base: #000;
-	--base-contrast: #fff;
+	--main: #000;
+	--secondary: #fff;
 
-	--main-100: #4e4e4e;
-	--main-200: #333;
-	--main-300: #272525;
-
+	--main-100: #333;
 	--secondary-100: #f9f9f9;
-	--secondary-200: #333;
-	--secondary-300: #272525;
-	--secondary-400: #aaaaaa;
+
+	--main-200: #191919;
+	--secondary-200: #f6f6f6;
+
+	--main-300: #242424;
+	--secondary-300: #e2e2e2;
+
+	--main-400: #282828;
+	--secondary-400: #cfcfcf;
+
+	--main-500: #2c2c2c;
 	--secondary-500: #777777;
-	--secondary-600: #5a5a5a;
 
-	--accent-100: #fffd00;
-	--accent-200: #fffe73;
-	--accent-300: #fffe73;
-	--accent-400: #bfbe30;
+	--main-600: #464444;
+	--secondary-400: #5a5a5a;
 
-	--grey-100: #f9f9f9;
-	--grey-200: #f0f0f0;
-	--grey-300: #e2e2e2;
-	--grey-400: #aaaaaa;
-	--grey-500: #777777;
-	--grey-600: #5a5a5a;
+	--accent-200: #eefae7;
+	--accent-300: #eefad1;
+	--accent-400: #eefabc;
+	--accent-500: #eefaa5;
+	--accent-600: #eefa7a;
+	--accent-700: #dce687;
+	--accent-800: #c3d701;
+
+	--gray-100: #f9f9f9;
+	--gray-200: #f6f6f6;
+	--gray-300: #f0f0f0;
+	--gray-400: #e2e2e2;
+	--gray-500: #cfcfcf;
+	--gray-600: #aaaaaa;
+	--gray-700: #777777;
+	--gray-800: #5a5a5a;
 
 	--button-box-shadow: 0px 1px 3.9px 0px rgba(113, 113, 113, 0.25);
 

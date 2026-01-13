@@ -1,10 +1,12 @@
+import { Link, type LinkProps } from 'react-router-dom';
+
 import { Icon, Typography } from '~components';
+import { S } from '~constants';
 
 import { BUTTON_ICON_SIZE, BUTTON_TEXT_SIZE } from './constants';
 import type { ButtonProps } from './types';
 
 import * as Style from './styled';
-import { S } from '~constants';
 
 export function Button({
 	buttonText,
@@ -14,7 +16,8 @@ export function Button({
 	buttonRightIconName,
 	buttonRightIconRotate,
 	buttonNodeElement,
-	buttonSize = 'S',
+	buttonSize = S,
+	buttonNavigateTo,
 	...rest
 }: ButtonProps) {
 	const buttonIconSize = BUTTON_ICON_SIZE[buttonSize ?? S];
@@ -25,6 +28,7 @@ export function Button({
 			isIconButton={!buttonText}
 			{...rest}
 		>
+			{buttonNavigateTo && <Link to={buttonNavigateTo as LinkProps['to']} />}
 			{buttonLeftNodeElement && buttonLeftNodeElement}
 			{buttonLeftIconName && (
 				<Icon

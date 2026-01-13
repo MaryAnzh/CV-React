@@ -14,6 +14,7 @@ export type ButtonStyleProps = Partial<{
 	isIconButton: boolean;
 	buttonRightIconRotate?: number;
 	buttonLeftIconRotate?: number;
+	buttonNavigateTo?: string;
 }>;
 
 export type ButtonProps = Omit<ButtonStyleProps, 'isIconButton'> &

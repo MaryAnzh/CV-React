@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from "@emotion/styled";
 
 export const APPWrap = styled.div`
 	width: 100%;
 	height: 100%;
-	background: var(--secondary-200);
-	color: var(--base-contrast);
+	background: var(--main-100);
+	color: var(--secondary);
 `;

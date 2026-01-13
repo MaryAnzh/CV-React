@@ -9,7 +9,13 @@
     },
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "import"],
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "import",
+    "@emotion"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -38,11 +44,24 @@
     ],
     "@typescript-eslint/consistent-type-imports": "error"
   },
-  "ignorePatterns": ["node_modules/", "build", "public", "*.config.*"],
+  "ignorePatterns": [
+    "node_modules/",
+    "build",
+    "public",
+    "*.config.*"
+  ],
   "settings": {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
+    "import/extensions": [
+      ".js",
+      ".jsx",
+      ".ts",
+      ".tsx"
+    ],
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
     },
     "import/resolver": {
       "typescript": {

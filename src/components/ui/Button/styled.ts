@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 import type { ButtonStyleProps } from './types';
 import { BUTTON_COLOR_VARIANTS, BUTTON_SIZES } from './constants';
 
@@ -29,17 +30,17 @@ export const ButtonDefault = styled.button`
 	}
 `;
 
-export const ButtonWrap = styled(ButtonDefault)<ButtonStyleProps>`
+export const ButtonWrap = styled(ButtonDefault) <ButtonStyleProps>`
 	${({
-		buttonColorVariant = 'dark',
-		buttonWidth = 'fit-content',
-		buttonSize = 'S',
-		isFistLaterLowercase,
-		isIconButton,
-		isMultiline,
-		isRoundButton,
-		hidden,
-	}) => {
+	buttonColorVariant = 'main',
+	buttonWidth = 'fit-content',
+	buttonSize = 'S',
+	isFistLaterLowercase,
+	isIconButton,
+	isMultiline,
+	isRoundButton,
+	hidden,
+}) => {
 		if (hidden) {
 			return css`
 				display: none;
@@ -93,11 +94,11 @@ export const ButtonWrap = styled(ButtonDefault)<ButtonStyleProps>`
 				background: ${bgFocus};
 				color: ${colorFocus};
 				${buttonWidth === 'fit-content' || buttonWidth === 'auto'
-					? `outline`
-					: 'border'}: 2px solid ${borderFocus};
+				? `outline`
+				: 'border'}: 2px solid ${borderFocus};
 
 				${(buttonWidth === 'fit-content' || buttonWidth === 'auto') &&
-				'outline-offset: -2px;'}
+			'outline-offset: -2px;'}
 			}
 
 			&:active {
@@ -112,4 +113,10 @@ export const ButtonWrap = styled(ButtonDefault)<ButtonStyleProps>`
 			}
 		`;
 	}}
+	& > a {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+	}
 `;

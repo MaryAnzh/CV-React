@@ -1,4 +1,4 @@
-export { MainPage, Gallery, Workspace } from './MainPage';
+export { MainPage, Gallery, AboutMePage } from './MainPage';
 export { AuthenticationPage } from './AuthenticationPage';
 export { GamesPage } from './GamesPage';
 export { NotFoundPage } from './NotFoundPage';
