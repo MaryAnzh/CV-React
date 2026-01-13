@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 
-import { Button, Icon, Logo, Typography } from 'components/ui';
+import { Button, Logo, Typography } from 'components/ui';
 
 import type { HeaderProps } from './types';
 import { ICON_BASE_SIZE } from '~constants';
