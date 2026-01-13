@@ -69,7 +69,7 @@ export const ButtonWrap = styled(ButtonDefault) <ButtonStyleProps>`
 			height: ${isIconButton ? 'fit-content' : height};
 			border-radius: ${isRoundButton ? '50%' : borderRadius};
 			padding: ${isIconButton
-				? 'opx'
+				? '0'
 				: `${paddingVertical} ${isGhostButton ? '0' : paddingHorizontal}`};
 			gap: ${gap};
 			background: ${bg};
@@ -78,10 +78,6 @@ export const ButtonWrap = styled(ButtonDefault) <ButtonStyleProps>`
 
 			& > span::first-letter {
 				text-transform: ${isFistLaterLowercase ? 'lowercase' : 'uppercase'};
-			}
-
-			& > svg {
-				fill: none;
 			}
 
 			&:hover {

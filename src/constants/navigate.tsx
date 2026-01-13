@@ -4,7 +4,6 @@ export const { MAIN_ROUTE } = {
 	MAIN_ROUTE: '/',
 } as const;
 
-
 export const {
 	ROUTE_LOGIN,
 	ROUTE_ACCOUNT,

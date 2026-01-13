@@ -25,3 +25,5 @@ export const SIZE_CHART = {
 } as const;
 
 export const { M, S, X, XS } = SIZE_CHART;
+
+export const ICON_BASE_SIZE = 16;

@@ -18,6 +18,8 @@ export function Button({
 	buttonNodeElement,
 	buttonSize = S,
 	buttonNavigateTo,
+	disabled,
+	onClick,
 	...rest
 }: ButtonProps) {
 	const buttonIconSize = BUTTON_ICON_SIZE[buttonSize ?? S];
@@ -26,6 +28,8 @@ export function Button({
 		<Style.ButtonWrap
 			buttonSize={buttonSize}
 			isIconButton={!buttonText}
+			onClick={onClick}
+			disabled={(disabled || !onClick) && !buttonNavigateTo}
 			{...rest}
 		>
 			{buttonNavigateTo && <Link to={buttonNavigateTo as LinkProps['to']} />}
