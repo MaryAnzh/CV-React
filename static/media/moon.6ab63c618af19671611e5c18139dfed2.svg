@@ -2,9 +2,9 @@ var _path, _path2, _circle, _path3;
 function _extends() { return _extends = Object.assign ? Object.assign.bind() : function (n) { for (var e = 1; e < arguments.length; e++) { var t = arguments[e]; for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]); } return n; }, _extends.apply(null, arguments); }
 import * as React from "react";
 const SvgMoon = props => /*#__PURE__*/React.createElement("svg", _extends({
-  stroke: "currentColor",
   xmlns: "http://www.w3.org/2000/svg",
   viewBox: "0 0 30 30",
+  stroke: "currentColor",
   fill: "none"
 }, props), _path || (_path = /*#__PURE__*/React.createElement("path", {
   d: "M15.3 27.3c-.8 0-1.6-.1-2.4-.2 5-1.8 8.5-6.6 8.5-12S18 4.9 12.9 3.1c.8-.2 1.6-.2 2.4-.2C22 2.8 27.5 8.2 27.5 15S22 27.3 15.3 27.3z"

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/CV-React/static/css/main.9f41f682.css",
-    "main.js": "/CV-React/static/js/main.8d64a560.js",
-    "static/media/moon.svg": "/CV-React/static/media/moon.78ce5f0ba9130665fe92de1425d0abfb.svg",
+    "main.js": "/CV-React/static/js/main.6089a9d3.js",
+    "static/media/moon.svg": "/CV-React/static/media/moon.6ab63c618af19671611e5c18139dfed2.svg",
     "static/media/sun.svg": "/CV-React/static/media/sun.c9e3092b5a7b5357727f63bdb457bbb5.svg",
     "static/media/burger.svg": "/CV-React/static/media/burger.f34dd7a0e671f0eebe1f385e6216a5a3.svg",
     "static/media/settings.svg": "/CV-React/static/media/settings.465e11ce7752e147502138f02f192a71.svg",
     "index.html": "/CV-React/index.html",
     "main.9f41f682.css.map": "/CV-React/static/css/main.9f41f682.css.map",
-    "main.8d64a560.js.map": "/CV-React/static/js/main.8d64a560.js.map"
+    "main.6089a9d3.js.map": "/CV-React/static/js/main.6089a9d3.js.map"
   },
   "entrypoints": [
     "static/css/main.9f41f682.css",
-    "static/js/main.8d64a560.js"
+    "static/js/main.6089a9d3.js"
   ]
 }
