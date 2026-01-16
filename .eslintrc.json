@@ -14,7 +14,9 @@
     "react",
     "react-hooks",
     "import",
-    "@emotion"
+    "@emotion",
+    "unused-imports",
+    "sonarjs"
   ],
   "extends": [
     "eslint:recommended",
@@ -43,7 +45,22 @@
         "argsIgnorePattern": "^_"
       }
     ],
-    "@typescript-eslint/consistent-type-imports": "error"
+    "@typescript-eslint/consistent-type-imports": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "sonarjs/no-duplicate-string": "warn",
+    "sonarjs/cognitive-complexity": [
+      "warn",
+      15
+    ]
   },
   "ignorePatterns": [
     "node_modules/",

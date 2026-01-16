@@ -1,4 +1,6 @@
 :root {
+	--black: #000;
+	--white: #fff;
 	--main: #fff;
 	--secondary: #000;
 
@@ -71,6 +73,8 @@
 }
 
 [data-theme='dark'] {
+	--black: #000;
+	--white: #fff;
 	--main: #000;
 	--secondary: #fff;
 

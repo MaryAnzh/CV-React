@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/react';
 import type { ButtonStyleProps } from './types';
 import { BUTTON_COLOR_VARIANTS, BUTTON_SIZES } from './constants';
+import { FIT_CONTENT, S } from '~constants';
 
 export const ButtonDefault = styled.button`
 	box-sizing: border-box;
@@ -33,8 +34,8 @@ export const ButtonDefault = styled.button`
 export const ButtonWrap = styled(ButtonDefault) <ButtonStyleProps>`
 	${({
 	buttonColorVariant = 'main',
-	buttonWidth = 'fit-content',
-	buttonSize = 'S',
+	buttonWidth = FIT_CONTENT,
+	buttonSize = S,
 	isFistLaterLowercase,
 	isIconButton,
 	isMultiline,
@@ -66,7 +67,7 @@ export const ButtonWrap = styled(ButtonDefault) <ButtonStyleProps>`
 
 		return css`
 			width: ${buttonWidth};
-			height: ${isIconButton ? 'fit-content' : height};
+			height: ${isIconButton ? FIT_CONTENT : height};
 			border-radius: ${isRoundButton ? '50%' : borderRadius};
 			padding: ${isIconButton
 				? '0'
@@ -89,11 +90,11 @@ export const ButtonWrap = styled(ButtonDefault) <ButtonStyleProps>`
 			&:focus {
 				background: ${bgFocus};
 				color: ${colorFocus};
-				${buttonWidth === 'fit-content' || buttonWidth === 'auto'
+				${buttonWidth === FIT_CONTENT || buttonWidth === 'auto'
 				? `outline`
 				: 'border'}: 2px solid ${borderFocus};
 
-				${(buttonWidth === 'fit-content' || buttonWidth === 'auto') &&
+				${(buttonWidth === FIT_CONTENT || buttonWidth === 'auto') &&
 			'outline-offset: -2px;'}
 			}
 
