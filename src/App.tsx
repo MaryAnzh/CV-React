@@ -1,7 +1,6 @@
 import { BrowserRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { DARK, LIGHT } from '~constants';
 import { AppLayout } from '~pages';
 import { type RootState } from '~store';
 
@@ -13,7 +12,7 @@ export const App = () => {
 
 	return (
 		<BrowserRouter basename="/CV-React">
-			<S.APPWrap data-theme={theme === LIGHT ? undefined : DARK}>
+			<S.APPWrap data-theme={theme}>
 				<AppLayout />
 			</S.APPWrap>
 		</BrowserRouter>

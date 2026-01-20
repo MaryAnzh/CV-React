@@ -1,14 +1,23 @@
-import { ABOUT_ME } from '~constants';
-import { Typography } from '~components';
-
+import { InfoCard } from '~components';
+import { AboutMeInfo } from './InfoSection';
 import * as S from './styled';
 
 export const AboutMePage = () => {
     return (
         <S.AboutMePageWrap>
-            <Typography>
-                {ABOUT_ME}
-            </Typography>
+            <AboutMeInfo />
+            <InfoCard>
+                2
+            </InfoCard>
+            <InfoCard>
+                3
+            </InfoCard>
+            <InfoCard>
+                4
+            </InfoCard>
+            <InfoCard>
+                5
+            </InfoCard>
         </S.AboutMePageWrap>
     );
 }

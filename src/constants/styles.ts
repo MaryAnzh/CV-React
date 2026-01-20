@@ -135,4 +135,4 @@ export const {
 	COLOR_ACCENT_600: 'var(--accent-600)',
 	COLOR_ACCENT_700: 'var(--accent-700)',
 	COLOR_ACCENT_800: 'var(--accent-800)',
-};
+} as const;
